@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Saver for Android</title>
+<meta name="description" content="See which apps spend your mobile data in the background, and stop them. No ads, no accounts, and no INTERNET permission.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">Anubis Productions &middot; Utilities</div>
+  <h1>Data Saver</h1>
+  <p class="dateline">See which apps spend your mobile data in the background &mdash; and
+  stop them.</p>
+</header>
+
+<p>Your phone tells you how much data you used. It does not tell you which app is the
+problem, and it will not stop it for you. Data Saver does both, in the same place: every app
+ranked by what it used this billing cycle, split into what you spent and what the app spent
+on its own while you were doing something else. Restrict any app straight from the row
+showing its usage.</p>
+
+<p>You can decide that per network &mdash; block an app on mobile data and leave it working
+normally on Wi-Fi, which on a metered bundle is usually what you actually want, since only
+one of the two costs you anything.</p>
+
+<div class="claim">
+  <p><strong>This app has no <code>INTERNET</code> permission.</strong> Not &ldquo;we promise
+  not to&rdquo; &mdash; it is absent from the manifest, so Android will not let the app open
+  a network connection at all. No accounts, no analytics, no crash reporting, no servers, no
+  ads. The figures come from counters Android already keeps on your device.</p>
+  <p>The source is public, so you can check that claim rather than believe it.</p>
+</div>
+
+<h2>Your notifications keep working</h2>
+
+<p>Notifications on Android are delivered by Google Play Services, not by each app&rsquo;s
+own connection. Restrict the wrong thing and every notification on your phone stops &mdash;
+messages, mail, calls. Data Saver will not let you do that by accident: Google Play Services,
+your dialler and your messaging app are protected and clearly marked.</p>
+
+<h2>Links</h2>
+
+<ul>
+  <li><a href="privacy/">Privacy policy</a></li>
+  <li><a href="https://github.com/anubisproductions/datagate">Source code on GitHub</a></li>
+  <li><a href="https://github.com/anubisproductions/datagate/issues">Report a problem or
+      request a feature</a></li>
+  <li><a href="mailto:anubisproductions.studio@gmail.com">anubisproductions.studio@gmail.com</a></li>
+</ul>
+
+<p>Requires Android 7.0 or later. Works offline. Free, and licensed under the
+<a href="https://github.com/anubisproductions/datagate/blob/main/LICENSE">GPL-3.0</a>.</p>
+
+<footer>
+  Anubis Productions &mdash; Tools You Can Verify.
+</footer>
+
+</div>
+</body>
+</html>

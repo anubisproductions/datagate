@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Data Saver</title>
+<meta name="description" content="Data Saver collects nothing. The app ships without the INTERNET permission, so it is technically incapable of sending your data anywhere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">Anubis Productions &middot; Utilities</div>
+  <h1>Privacy Policy</h1>
+  <p class="dateline">Data Saver for Android &mdash; <code>com.anubisproductions.datagate</code><br>
+  Effective 4 September 2026. Last updated 4 September 2026.</p>
+</header>
+
+<div class="claim">
+  <p><strong>Data Saver does not collect, transmit, store off your device, or share any
+  personal information. There is no account, no analytics, no crash reporting, no
+  advertising and no server.</strong></p>
+  <p>This is not a promise about our intentions. The app is built without Android&rsquo;s
+  <code>INTERNET</code> permission, which means the operating system will not allow it to
+  open a network connection at all. The <a href="https://github.com/anubisproductions/datagate">source
+  code is public</a> and you can verify this yourself in under a minute &mdash; see
+  &ldquo;How to check this yourself&rdquo; below.</p>
+</div>
+
+<h2>Who we are</h2>
+
+<p>Data Saver is published by Anubis Productions, an independent developer based in Egypt.
+You can reach us at
+<a href="mailto:anubisproductions.studio@gmail.com">anubisproductions.studio@gmail.com</a>.</p>
+
+<h2>What the app reads, and where it stays</h2>
+
+<p>Data Saver shows you how much mobile and Wi-Fi data each app on your phone has used, and
+lets you stop apps from using the network. To do that it reads information that already
+exists on your device:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>What is read</th><th>Why</th><th>Where it goes</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Per-app data usage counters</td>
+      <td>To show which apps used how much data, split into foreground and background</td>
+      <td>Read from Android on demand. Never copied off the device</td>
+    </tr>
+    <tr>
+      <td>The list of apps installed on your device</td>
+      <td>To show you a list you recognise, and attribute usage to the right app</td>
+      <td>Read from Android on demand. Never copied off the device</td>
+    </tr>
+    <tr>
+      <td>Whether you are on Wi-Fi or mobile data</td>
+      <td>So a rule you set for mobile does not also apply on Wi-Fi</td>
+      <td>Used in memory only</td>
+    </tr>
+    <tr>
+      <td>Your settings &mdash; which apps you restricted, your monthly data bundle, your
+          billing cycle start day</td>
+      <td>So your choices survive closing the app and restarting the phone</td>
+      <td>Saved in the app&rsquo;s own private storage on your device</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Everything in that table stays on your phone. It is not uploaded, backed up to us,
+synchronised, sold, or shared with anyone &mdash; including us. We have no way to receive it.</p>
+
+<h3>We never see or ask for</h3>
+
+<ul>
+  <li>Your name, email address, phone number or any account identifier</li>
+  <li>Your location</li>
+  <li>Your contacts, messages, photos, files or call history</li>
+  <li>Advertising identifiers or any other device identifier</li>
+  <li>The contents of your network traffic, or which websites you visit</li>
+</ul>
+
+<h2>The VPN permission, and what it is not</h2>
+
+<p>To stop an app from using the network without root access, Android offers exactly one
+mechanism to ordinary apps: <code>VpnService</code>. Data Saver uses it, so Android shows a
+key icon in your status bar while restrictions are active. That icon worries people, so here
+is precisely what is happening.</p>
+
+<p>Data Saver is <strong>not</strong> a VPN in the ordinary sense. There is no remote server.
+Your traffic is not routed anywhere, not tunnelled, not proxied, and not decrypted. Nothing
+is sent to us, because the app cannot send anything to anyone.</p>
+
+<p>The app uses <code>VpnService</code> in what Android calls package-list mode: it names the
+apps you chose to restrict, and only those apps are pointed at a local dead end inside your
+own phone. Every other app on your device is untouched and keeps using the network directly,
+at full speed, exactly as before &mdash; their traffic never passes through Data Saver at
+all. For the restricted apps, Data Saver reads only the minimum needed to reply
+&ldquo;no network here&rdquo;, and that reply is generated on your device.</p>
+
+<p>The key icon means a local connection exists. It does not mean traffic is leaving through
+anyone&rsquo;s server.</p>
+
+<h2>Permissions the app requests</h2>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Permission</th><th>What it is for</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Usage access<br><code>PACKAGE_USAGE_STATS</code></td>
+      <td>The only way Android exposes per-app data figures. You grant it yourself in
+          Settings and can revoke it at any time. Without it the app can show you nothing</td>
+    </tr>
+    <tr>
+      <td>VPN service</td>
+      <td>The local connection described above, used to restrict apps. You approve it with
+          Android&rsquo;s own confirmation dialog</td>
+    </tr>
+    <tr>
+      <td>Query installed apps<br><code>QUERY_ALL_PACKAGES</code></td>
+      <td>To list the apps on your phone and match usage figures to them. An app-by-app data
+          manager cannot work without seeing which apps exist</td>
+    </tr>
+    <tr>
+      <td>Network state<br><code>ACCESS_NETWORK_STATE</code></td>
+      <td>To tell whether you are currently on Wi-Fi or mobile data, so per-network rules
+          apply correctly. It reports connectivity status only and grants no network access</td>
+    </tr>
+    <tr>
+      <td>Notifications<br><code>POST_NOTIFICATIONS</code></td>
+      <td>Android requires a visible ongoing notification whenever a VPN service is running,
+          so you always know it is active</td>
+    </tr>
+    <tr>
+      <td>Foreground service</td>
+      <td>To keep restrictions enforced while you use other apps, instead of the service
+          being killed in the background</td>
+    </tr>
+    <tr>
+      <td>Run at startup<br><code>RECEIVE_BOOT_COMPLETED</code></td>
+      <td>To restore your restrictions after you restart your phone, so they do not silently
+          stop working</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Notably absent: <code>INTERNET</code>. Data Saver does not request it and cannot obtain it
+without you installing a different version of the app.</p>
+
+<h2>Advertising and purchases</h2>
+
+<p>Data Saver contains no advertising, and no advertising or analytics libraries of any
+kind.</p>
+
+<p>The app currently contains no in-app purchases. If an optional one-time purchase is added
+in a future version, it will be processed entirely by Google Play Billing: Google handles the
+transaction, and we never see your payment card, billing address or any other payment detail.
+Google&rsquo;s handling of that transaction is covered by
+<a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a>. Core
+functionality will remain free.</p>
+
+<h2>Children</h2>
+
+<p>Data Saver is a general-purpose utility, is not directed at children, and does not
+knowingly collect information from anyone &mdash; children included &mdash; because it does
+not collect information at all.</p>
+
+<h2>Your rights, and what they mean when nothing is collected</h2>
+
+<p>Laws such as the GDPR and the CCPA give you the right to access, correct, export, delete
+and object to the processing of your personal data, and the right not to be discriminated
+against for exercising those rights. We honour all of them. In practice there is nothing for
+us to produce or erase, because we hold no data about you: we cannot identify you, and we do
+not sell or share personal information &mdash; we have none to sell.</p>
+
+<p>The settings the app stores are held on your own device, under your control. To erase
+them, either clear the app&rsquo;s storage in <em>Settings &rarr; Apps &rarr; Data Saver
+&rarr; Storage</em>, or uninstall the app; either removes them completely and permanently.
+Revoking Usage access in Settings stops the app reading usage figures immediately.</p>
+
+<h2>Data breaches</h2>
+
+<p>There is no server holding your information and no database of users, so there is no
+central store that could be breached. Your data is as safe as your phone is.</p>
+
+<h2>How to check this yourself</h2>
+
+<p>You do not have to take our word for any of the above.</p>
+
+<ul>
+  <li><strong>On your phone:</strong> open <em>Settings &rarr; Apps &rarr; Data Saver &rarr;
+      Permissions</em>, or view the permission list on the Google Play listing. There is no
+      network or internet permission.</li>
+  <li><strong>In the source:</strong> read
+      <a href="https://github.com/anubisproductions/datagate/blob/main/app/src/main/AndroidManifest.xml"><code>app/src/main/AndroidManifest.xml</code></a>.
+      Every permission the app can ever hold is listed there, in full.</li>
+  <li><strong>On the built app:</strong> run <code>aapt dump permissions</code> against the
+      APK, or open it in any APK analyser, and compare the result with the table above.</li>
+</ul>
+
+<h2>Changes to this policy</h2>
+
+<p>If this policy changes, the updated version will be published at this address with a new
+&ldquo;last updated&rdquo; date, and the change will be recorded in the public
+repository&rsquo;s history, so every edit is visible and dated. If a future version of the
+app ever collects anything at all, we will say so here plainly, and before that version
+ships.</p>
+
+<h2>Contact</h2>
+
+<p>Questions, or a privacy request you would like to make:
+<a href="mailto:anubisproductions.studio@gmail.com">anubisproductions.studio@gmail.com</a>.
+Issues and corrections can also be raised publicly on
+<a href="https://github.com/anubisproductions/datagate/issues">GitHub</a>.</p>
+
+<footer>
+  Anubis Productions &mdash; Tools You Can Verify.
+  <a href="../">Back to Data Saver</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* Anubis Productions - Utilities line.
+   Sandstone ground, tomb-stone text, malachite accent. No pure black or white. */
+
+:root {
+  --ground:      #F5EDD8;   /* Linen */
+  --panel:       #EFE4C6;
+  --ink:         #3A342A;   /* Tomb Stone */
+  --ink-soft:    #6B6252;
+  --accent:      #1F7A4D;   /* Malachite */
+  --rule:        #D4AF37;   /* Pharaoh Gold */
+  --hair:        #D8C89C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:   #23201A;
+    --panel:    #2C281F;
+    --ink:      #EDE3CA;
+    --ink-soft: #A99E85;
+    --accent:   #46B07C;
+    --rule:     #D4AF37;
+    --hair:     #443E31;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground:   #23201A;
+  --panel:    #2C281F;
+  --ink:      #EDE3CA;
+  --ink-soft: #A99E85;
+  --accent:   #46B07C;
+  --rule:     #D4AF37;
+  --hair:     #443E31;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 46rem;           /* ~65 characters of running text */
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+header.masthead {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--rule);
+}
+
+.eyebrow {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h2 {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.28rem;
+  margin: 2.75rem 0 0.75rem;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+p { margin: 0 0 1rem; }
+
+.dateline {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--rule); outline-offset: 3px; border-radius: 2px; }
+
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+strong { font-weight: 600; }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--panel);
+  padding: 0.12em 0.36em;
+  border-radius: 3px;
+}
+
+.claim {
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+.claim p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+.scroll { overflow-x: auto; }
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--hair);
+}
+th {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--hair);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
