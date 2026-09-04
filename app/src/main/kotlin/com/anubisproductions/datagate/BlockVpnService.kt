@@ -152,7 +152,7 @@ class BlockVpnService : VpnService() {
         // startForegroundService() gives us only a few seconds to call startForeground(),
         // and the deadline applies even on paths that bail out early (empty rule set,
         // uninstalled packages, a STOP request). Go foreground first, decide afterwards.
-        startForegroundCompat("Starting")
+        startForegroundCompat(getString(R.string.notif_starting))
 
         when (intent?.action) {
             ACTION_STOP -> {
@@ -243,7 +243,14 @@ class BlockVpnService : VpnService() {
         tun = fd
         running = true
         isRunning = true
-        startForegroundCompat("${applied.size} app(s) restricted on $kind - mode $mode")
+        startForegroundCompat(
+            resources.getQuantityString(
+                if (kind == NetKind.WIFI) R.plurals.notif_active_wifi
+                else R.plurals.notif_active_mobile,
+                applied.size,
+                applied.size,
+            )
+        )
         AttemptLog.reset()
         Log.i(
             AttemptLog.TAG,
@@ -371,7 +378,7 @@ class BlockVpnService : VpnService() {
             nm.createNotificationChannel(
                 NotificationChannel(
                     CHANNEL_ID,
-                    "Engine",
+                    getString(R.string.notif_channel),
                     NotificationManager.IMPORTANCE_LOW,
                 ).apply { setShowBadge(false) }
             )
@@ -385,7 +392,7 @@ class BlockVpnService : VpnService() {
         }
 
         val notification = builder
-            .setContentTitle("DataGate")
+            .setContentTitle(getString(R.string.app_name))
             .setContentText(status)
             .setSmallIcon(android.R.drawable.ic_lock_lock)
             .setOngoing(true)

@@ -56,4 +56,20 @@
     <string name="mode_help_drop">Los paquetes se descartan y la aplicación espera hasta agotar su propio tiempo de espera. Es lo que hace la mayoría de las aplicaciones de bloqueo.</string>
     <string name="mode_help_refuse">Las conexiones se rechazan al instante. Medido con tráfico real, esto hizo que las aplicaciones reintentaran antes y un 40%% más a menudo, por eso no es la opción predeterminada.</string>
     <string name="mode_help_nxdomain">Las búsquedas de nombres reciben una respuesta negativa real en lugar de silencio. Registró el menor tráfico de reintentos de las tres.</string>
+    <string name="row_restricted_saved">%1$s · ahorrado ~%2$s</string>
+    <string name="row_usage">%1$s en móviles · %2$s en segundo plano</string>
+    <string name="notif_channel">Motor de bloqueo</string>
+    <string name="notif_starting">Iniciando…</string>
+    <string name="toast_settings_failed">No se pudo abrir Ajustes</string>
+    <string name="toast_nothing_background">Ahora mismo nada consume mucho en segundo plano</string>
+    <string name="toast_restrict_first">Restringe al menos una aplicación primero</string>
+    <string name="toast_vpn_required">Se requiere permiso para restringir aplicaciones</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">%1$d aplicación restringida en Wi‑Fi</item>
+        <item quantity="other">%1$d aplicaciones restringidas en Wi‑Fi</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">%1$d aplicación restringida en datos móviles</item>
+        <item quantity="other">%1$d aplicaciones restringidas en datos móviles</item>
+    </plurals>
 </resources>

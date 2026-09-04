@@ -56,4 +56,18 @@
     <string name="mode_help_drop">Paket dibuang dan aplikasi menunggu sampai waktu tunggunya sendiri habis. Ini yang dilakukan sebagian besar aplikasi pemblokir.</string>
     <string name="mode_help_refuse">Koneksi ditolak seketika. Diukur pada trafik nyata, ini membuat aplikasi mencoba lagi lebih cepat dan sekitar 40%% lebih sering, jadi bukan pilihan bawaan.</string>
     <string name="mode_help_nxdomain">Pencarian nama mendapat jawaban negatif yang sesungguhnya, bukan kesunyian. Tercatat trafik percobaan ulang paling sedikit dari ketiganya.</string>
+    <string name="row_restricted_saved">%1$s · hemat ~%2$s</string>
+    <string name="row_usage">%1$s seluler · %2$s di latar belakang</string>
+    <string name="notif_channel">Mesin pemblokir</string>
+    <string name="notif_starting">Memulai…</string>
+    <string name="toast_settings_failed">Tidak dapat membuka Setelan</string>
+    <string name="toast_nothing_background">Saat ini tidak ada yang boros di latar belakang</string>
+    <string name="toast_restrict_first">Batasi setidaknya satu aplikasi dulu</string>
+    <string name="toast_vpn_required">Izin diperlukan untuk membatasi aplikasi</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="other">%1$d aplikasi dibatasi di Wi‑Fi</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="other">%1$d aplikasi dibatasi di data seluler</item>
+    </plurals>
 </resources>

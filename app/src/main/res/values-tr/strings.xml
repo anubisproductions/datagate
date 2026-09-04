@@ -56,4 +56,18 @@
     <string name="mode_help_drop">Paketler atılır ve uygulama kendi zaman aşımına kadar bekler. Çoğu engelleme uygulaması bunu yapar.</string>
     <string name="mode_help_refuse">Bağlantılar anında reddedilir. Gerçek trafikte ölçüldüğünde uygulamalar daha erken ve yaklaşık %%40 daha sık yeniden denedi, bu yüzden varsayılan değil.</string>
     <string name="mode_help_nxdomain">Ad sorguları sessizlik yerine gerçek bir olumsuz yanıt alır. Üçü arasında en az yeniden deneme trafiğini ölçtü.</string>
+    <string name="row_restricted_saved">%1$s · ~%2$s tasarruf</string>
+    <string name="row_usage">%1$s mobil · %2$s arka planda</string>
+    <string name="notif_channel">Engelleme motoru</string>
+    <string name="notif_starting">Başlatılıyor…</string>
+    <string name="toast_settings_failed">Ayarlar açılamadı</string>
+    <string name="toast_nothing_background">Şu anda arka planda çok harcayan bir şey yok</string>
+    <string name="toast_restrict_first">Önce en az bir uygulamayı kısıtlayın</string>
+    <string name="toast_vpn_required">Uygulamaları kısıtlamak için izin gerekiyor</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="other">Wi‑Fi üzerinde %1$d uygulama kısıtlandı</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="other">Mobil veride %1$d uygulama kısıtlandı</item>
+    </plurals>
 </resources>

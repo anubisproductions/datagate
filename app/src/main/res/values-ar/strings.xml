@@ -58,4 +58,28 @@
     <string name="mode_help_drop">تُهمَل الحزم ويظل التطبيق ينتظر حتى تنتهي مهلته. هذا ما تفعله معظم تطبيقات الحظر.</string>
     <string name="mode_help_refuse">تُرفض الاتصالات فورًا. بالقياس على بيانات حقيقية جعل هذا التطبيقات تعيد المحاولة أسرع وبنحو 40%% أكثر، لذا ليس هو الخيار الافتراضي.</string>
     <string name="mode_help_nxdomain">يحصل البحث عن الأسماء على إجابة سلبية حقيقية بدلًا من الصمت. سجّل أقل حركة إعادة محاولة بين الثلاثة.</string>
+    <string name="row_restricted_saved">%1$s · وُفّر ~%2$s</string>
+    <string name="row_usage">%1$s على الجوّال · %2$s في الخلفية</string>
+    <string name="notif_channel">محرّك الحظر</string>
+    <string name="notif_starting">جارٍ البدء…</string>
+    <string name="toast_settings_failed">تعذّر فتح الإعدادات</string>
+    <string name="toast_nothing_background">لا يوجد حاليًا ما يستهلك كثيرًا في الخلفية</string>
+    <string name="toast_restrict_first">قيّد تطبيقًا واحدًا على الأقل أولًا</string>
+    <string name="toast_vpn_required">الإذن مطلوب لتقييد التطبيقات</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="zero">لا تطبيقات مقيّدة على الواي فاي</item>
+        <item quantity="one">تطبيق واحد مقيّد على الواي فاي</item>
+        <item quantity="two">تطبيقان مقيّدان على الواي فاي</item>
+        <item quantity="few">%1$d تطبيقات مقيّدة على الواي فاي</item>
+        <item quantity="many">%1$d تطبيقًا مقيّدًا على الواي فاي</item>
+        <item quantity="other">%1$d تطبيق مقيّد على الواي فاي</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="zero">لا تطبيقات مقيّدة على بيانات الجوّال</item>
+        <item quantity="one">تطبيق واحد مقيّد على بيانات الجوّال</item>
+        <item quantity="two">تطبيقان مقيّدان على بيانات الجوّال</item>
+        <item quantity="few">%1$d تطبيقات مقيّدة على بيانات الجوّال</item>
+        <item quantity="many">%1$d تطبيقًا مقيّدًا على بيانات الجوّال</item>
+        <item quantity="other">%1$d تطبيق مقيّد على بيانات الجوّال</item>
+    </plurals>
 </resources>

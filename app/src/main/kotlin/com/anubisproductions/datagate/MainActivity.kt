@@ -1,9 +1,12 @@
 package com.anubisproductions.datagate
 
+import android.Manifest
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.VpnService
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -39,6 +42,7 @@ class MainActivity : Activity() {
 
     private companion object {
         const val REQUEST_CONSENT = 1
+        const val REQUEST_NOTIFY = 2
         const val FILTER_ALL = 0
         const val FILTER_MOBILE = 1
         const val FILTER_BACKGROUND = 2
@@ -105,13 +109,15 @@ class MainActivity : Activity() {
                     } else {
                         val saved = Budget.estimatedSavedFor(this@MainActivity, a.packageName)
                         if (saved > 0) {
-                            "${getString(R.string.restricted)} · saved ~${UsageRepository.formatBytes(saved)}"
+                            getString(R.string.row_restricted_saved,
+                                getString(R.string.restricted),
+                                UsageRepository.formatBytes(saved))
                         } else {
                             getString(R.string.restricted)
                         }
                     }
                 } else {
-                    "$mob mobile · $bg in background"
+                    getString(R.string.row_usage, mob, bg)
                 }
                 view.alpha = 1f
             }
@@ -186,7 +192,7 @@ class MainActivity : Activity() {
             Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS),
             Intent(Settings.ACTION_SETTINGS),
         ).any { runCatching { startActivity(it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }.isSuccess }
-        if (!ok) Toast.makeText(this, "Could not open Settings", Toast.LENGTH_SHORT).show()
+        if (!ok) Toast.makeText(this, R.string.toast_settings_failed, Toast.LENGTH_SHORT).show()
     }
 
     // ------------------------------------------------------------------ data
@@ -340,7 +346,7 @@ class MainActivity : Activity() {
             .sortedByDescending { it.background }
             .take(5)
         if (candidates.isEmpty()) {
-            Toast.makeText(this, "Nothing is heavily background-active right now", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_nothing_background, Toast.LENGTH_SHORT).show()
             return
         }
         val names = candidates.joinToString("\n") {
@@ -386,7 +392,7 @@ class MainActivity : Activity() {
             if (master.isChecked) {
                 if (blocked.isEmpty()) {
                     master.isChecked = false
-                    Toast.makeText(this, "Restrict at least one app first", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.toast_restrict_first, Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
                 startEngine()
@@ -413,11 +419,34 @@ class MainActivity : Activity() {
     }
 
     private fun startEngine() {
+        askForNotificationsOnce()
         val consent = VpnService.prepare(this)
         if (consent != null) startActivityForResult(consent, REQUEST_CONSENT)
         else {
             BlockVpnService.start(this)
             postRefresh()
+        }
+    }
+
+    /**
+     * On API 33+ POST_NOTIFICATIONS is a runtime permission and starts denied, so the
+     * foreground-service notification is silently suppressed: the engine runs with nothing
+     * in the shade to say so, and the only clue is the system key icon.
+     *
+     * That matters beyond tidiness. The listing and the privacy policy both tell the user
+     * an ongoing notification will be there whenever blocking is active, and without this
+     * request that statement is untrue on most current devices.
+     *
+     * Asked at the moment the engine starts rather than at launch, so the prompt has a
+     * visible reason. Declining is fine - blocking still works, it is just quieter.
+     */
+    private fun askForNotificationsOnce() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
+        val granted = checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) ==
+            PackageManager.PERMISSION_GRANTED
+        if (granted) return
+        runCatching {
+            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), REQUEST_NOTIFY)
         }
     }
 
@@ -427,7 +456,7 @@ class MainActivity : Activity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode != REQUEST_CONSENT) return
         if (resultCode == RESULT_OK) BlockVpnService.start(this)
-        else Toast.makeText(this, "VPN permission is required to restrict apps", Toast.LENGTH_LONG).show()
+        else Toast.makeText(this, R.string.toast_vpn_required, Toast.LENGTH_LONG).show()
         postRefresh()
     }
 

@@ -64,4 +64,20 @@
     <string name="protected_reason_push">Delivers all your notifications</string>
     <string name="protected_reason_calls">Calls and messages</string>
     <string name="protected_reason_self">This app</string>
+    <string name="row_restricted_saved">%1$s · saved ~%2$s</string>
+    <string name="row_usage">%1$s mobile · %2$s in background</string>
+    <string name="notif_channel">Blocking engine</string>
+    <string name="notif_starting">Starting…</string>
+    <string name="toast_settings_failed">Could not open Settings</string>
+    <string name="toast_nothing_background">Nothing is heavily background-active right now</string>
+    <string name="toast_restrict_first">Restrict at least one app first</string>
+    <string name="toast_vpn_required">Permission is required to restrict apps</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">%1$d app restricted on Wi‑Fi</item>
+        <item quantity="other">%1$d apps restricted on Wi‑Fi</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">%1$d app restricted on mobile data</item>
+        <item quantity="other">%1$d apps restricted on mobile data</item>
+    </plurals>
 </resources>

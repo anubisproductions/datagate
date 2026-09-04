@@ -56,4 +56,20 @@
     <string name="mode_help_drop">Os pacotes são descartados e o app espera até o próprio tempo limite. É o que a maioria dos apps de bloqueio faz.</string>
     <string name="mode_help_refuse">As conexões são recusadas na hora. Medido em tráfego real, isso fez os apps tentarem de novo mais cedo e cerca de 40%% mais vezes, por isso não é o padrão.</string>
     <string name="mode_help_nxdomain">As buscas de nome recebem uma resposta negativa real em vez de silêncio. Registrou o menor tráfego de novas tentativas entre os três.</string>
+    <string name="row_restricted_saved">%1$s · economizado ~%2$s</string>
+    <string name="row_usage">%1$s em dados móveis · %2$s em segundo plano</string>
+    <string name="notif_channel">Mecanismo de bloqueio</string>
+    <string name="notif_starting">Iniciando…</string>
+    <string name="toast_settings_failed">Não foi possível abrir as Configurações</string>
+    <string name="toast_nothing_background">No momento nada está consumindo muito em segundo plano</string>
+    <string name="toast_restrict_first">Bloqueie pelo menos um app primeiro</string>
+    <string name="toast_vpn_required">É necessária permissão para bloquear apps</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">%1$d app bloqueado no Wi‑Fi</item>
+        <item quantity="other">%1$d apps bloqueados no Wi‑Fi</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">%1$d app bloqueado nos dados móveis</item>
+        <item quantity="other">%1$d apps bloqueados nos dados móveis</item>
+    </plurals>
 </resources>

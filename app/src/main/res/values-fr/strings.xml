@@ -56,4 +56,20 @@
     <string name="mode_help_drop">Les paquets sont abandonnés et l\'application attend l\'expiration de son propre délai. C\'est ce que font la plupart des applications de blocage.</string>
     <string name="mode_help_refuse">Les connexions sont refusées immédiatement. Mesuré sur du trafic réel, cela a poussé les applications à réessayer plus tôt et environ 40%% plus souvent : ce n\'est donc pas l\'option par défaut.</string>
     <string name="mode_help_nxdomain">Les résolutions de noms obtiennent une vraie réponse négative au lieu du silence. C\'est l\'option qui a mesuré le moins de trafic de réessai des trois.</string>
+    <string name="row_restricted_saved">%1$s · économisé ~%2$s</string>
+    <string name="row_usage">%1$s en mobile · %2$s en arrière-plan</string>
+    <string name="notif_channel">Moteur de blocage</string>
+    <string name="notif_starting">Démarrage…</string>
+    <string name="toast_settings_failed">Impossible d\'ouvrir les Paramètres</string>
+    <string name="toast_nothing_background">Rien ne consomme beaucoup en arrière-plan pour le moment</string>
+    <string name="toast_restrict_first">Restreignez d\'abord au moins une application</string>
+    <string name="toast_vpn_required">Une autorisation est requise pour restreindre des applications</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">%1$d application restreinte en Wi‑Fi</item>
+        <item quantity="other">%1$d applications restreintes en Wi‑Fi</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">%1$d application restreinte en données mobiles</item>
+        <item quantity="other">%1$d applications restreintes en données mobiles</item>
+    </plurals>
 </resources>

@@ -56,4 +56,20 @@
     <string name="mode_help_drop">पैकेट छोड़ दिए जाते हैं और ऐप अपने टाइमआउट तक इंतज़ार करता है। ज़्यादातर ब्लॉकिंग ऐप्स यही करते हैं।</string>
     <string name="mode_help_refuse">कनेक्शन तुरंत अस्वीकार होते हैं। असली ट्रैफ़िक पर मापने पर ऐप्स जल्दी और करीब 40%% ज़्यादा बार दोबारा कोशिश करते हैं, इसलिए यह डिफ़ॉल्ट नहीं है।</string>
     <string name="mode_help_nxdomain">नाम खोज को चुप्पी के बजाय असली नकारात्मक जवाब मिलता है। तीनों में सबसे कम रीट्राई ट्रैफ़िक मापा गया।</string>
+    <string name="row_restricted_saved">%1$s · बचाया ~%2$s</string>
+    <string name="row_usage">%1$s मोबाइल · %2$s बैकग्राउंड में</string>
+    <string name="notif_channel">ब्लॉकिंग इंजन</string>
+    <string name="notif_starting">शुरू हो रहा है…</string>
+    <string name="toast_settings_failed">सेटिंग नहीं खुल सकी</string>
+    <string name="toast_nothing_background">अभी बैकग्राउंड में कुछ भी ज़्यादा सक्रिय नहीं है</string>
+    <string name="toast_restrict_first">पहले कम से कम एक ऐप प्रतिबंधित करें</string>
+    <string name="toast_vpn_required">ऐप्स प्रतिबंधित करने के लिए अनुमति ज़रूरी है</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">वाई‑फ़ाई पर %1$d ऐप प्रतिबंधित</item>
+        <item quantity="other">वाई‑फ़ाई पर %1$d ऐप प्रतिबंधित</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">मोबाइल डेटा पर %1$d ऐप प्रतिबंधित</item>
+        <item quantity="other">मोबाइल डेटा पर %1$d ऐप प्रतिबंधित</item>
+    </plurals>
 </resources>

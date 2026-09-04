@@ -105,3 +105,28 @@ Not yet verified. Before committing to the paid tier, integrate Play Billing and
 `aapt dump permissions` on the resulting APK. If the library adds `INTERNET`, the trust
 claim and the "no data collected" data-safety declaration both change, and that is a
 product decision rather than a detail.
+
+### 11. Notification permission was never requested — FIXED
+
+`POST_NOTIFICATIONS` was declared in the manifest but never requested at runtime. On API 33+
+it starts denied, so the foreground-service notification was silently suppressed: the engine
+ran with nothing in the shade, and the only clue was the system key icon.
+
+Confirmed on the test device — `granted=false`, no notification, engine running.
+
+That also made a sentence in the listing and the privacy policy untrue on most current
+devices, since both promise an ongoing notification whenever blocking is active.
+
+**Fixed:** requested when the engine starts, so the prompt has a visible reason. The privacy
+policy now also states what happens if the user declines — blocking still works, the
+notification just does not appear.
+
+### 12. Notification counts were not pluralised — FIXED
+
+The count was formatted as `%d apps restricted`, which is correct only in English. Arabic
+rendered "1 تطبيقات" — a plural noun after 1 — which reads as broken to any native
+speaker, and is exactly the machine-translation tell that costs this category its ratings.
+
+**Fixed:** `<plurals>` with the quantity classes each locale actually defines — six for
+Arabic, four for Russian, one for Turkish and Indonesian, which take a singular noun after a
+numeral. Verified on device: Arabic now renders "تطبيق واحد مقيّد على الواي فاي".
