@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- German -->
+<resources>
+    <string name="app_name">Datensparen</string>
+    <string name="onboard_title">Eine Berechtigung, dann ist es erledigt</string>
+    <string name="onboard_body">Android hält die Datenwerte pro App hinter einer Einstellung namens Nutzungszugriff. Ohne sie kann diese App nicht sehen, welche Apps Ihre Daten verbrauchen.\n\nSie liest Zähler, die ohnehin schon auf Ihrem Telefon liegen. Nichts wird hochgeladen — diese App hat überhaupt keine Internetberechtigung.</string>
+    <string name="onboard_button">Nutzungszugriff erteilen</string>
+    <string name="onboard_hint">Suchen Sie „Datensparen“ in der Liste, schalten Sie es ein und kommen Sie zurück.</string>
+    <string name="cycle_label">Mobile Daten in diesem Zyklus</string>
+    <string name="of_bundle">von %1$s Paket</string>
+    <string name="no_bundle_set">Tippen, um Ihr Monatspaket festzulegen</string>
+    <string name="plus_wifi">plus %1$s über WLAN</string>
+    <string name="since_date">seit %1$s</string>
+    <string name="background_label">Im Hintergrund verbraucht</string>
+    <string name="background_hint">Daten, die diese Apps von sich aus verbraucht haben, während Sie sie nicht benutzt haben.</string>
+    <string name="saved_label">Geschätzt gespart</string>
+    <string name="saving_on">Datensparen ist ein</string>
+    <string name="saving_off">Datensparen ist aus</string>
+    <string name="restricted">Eingeschränkt</string>
+    <string name="protected_app">Geschützt — hält Ihre Benachrichtigungen am Laufen</string>
+    <string name="other_apps">Andere &amp; System</string>
+    <string name="other_hint">Datenverkehr, den Android keiner einzelnen App zuordnet. Angezeigt, damit diese Werte zu denen in den Einstellungen passen.</string>
+    <string name="filter_all">Alle</string>
+    <string name="filter_mobile">Nur mobil</string>
+    <string name="filter_background">Schlimmster Hintergrund</string>
+    <string name="restrict_all_heavy">Größte Hintergrund-Verbraucher einschränken</string>
+    <string name="search_hint">Apps suchen</string>
+    <string name="set_bundle_title">Monatliches Mobilfunkpaket</string>
+    <string name="restricted_inactive">Eingeschränkt — noch nicht aktiv</string>
+    <string name="saving_off_with_rules">Regeln gesetzt, aber nicht aktiv — zum Anwenden einschalten</string>
+    <string name="open_blocking">Blockieren pro Netzwerk →</string>
+    <string name="blocking_title">Blockieren</string>
+    <string name="blocking_hint">Wählen Sie, welche Netzwerke jede App nutzen darf. Bei einem begrenzten Paket lautet die übliche Antwort „keine mobilen Daten, WLAN ist in Ordnung“.</string>
+    <string name="blocking_none">Nichts blockiert</string>
+    <string name="blocking_active">Aktiv · WLAN: %1$d · Mobil: %2$d</string>
+    <string name="blocking_inactive">Regeln gesetzt, aber nicht aktiv — eine Berechtigung ist erforderlich</string>
+    <string name="blocked_everywhere">Im WLAN und mobil blockiert</string>
+    <string name="blocked_mobile_only">Nur mobil blockiert</string>
+    <string name="blocked_wifi_only">Nur im WLAN blockiert</string>
+    <string name="allowed">Erlaubt</string>
+    <string name="col_wifi">WLAN</string>
+    <string name="col_mobile">Mobil</string>
+    <string name="consent_required">Zum Blockieren von Apps ist eine Berechtigung erforderlich</string>
+    <string name="loading_apps">Apps werden geladen…</string>
+    <string name="mode_label">Wenn eine blockierte App eine Verbindung versucht</string>
+    <string name="mode_drop">Ignorieren (am leisesten)</string>
+    <string name="mode_refuse">Sofort ablehnen</string>
+    <string name="mode_nxdomain">Mit „Adresse nicht gefunden“ antworten (empfohlen)</string>
+    <string name="mode_help_drop">Pakete werden verworfen. Die App wartet auf ihr eigenes Zeitlimit. Das machen die meisten Blocker-Apps.</string>
+    <string name="mode_help_refuse">Verbindungen werden sofort abgelehnt. Bei echtem Datenverkehr gemessen versuchten Apps es dadurch früher und rund 40%% häufiger erneut, deshalb ist dies nicht die Voreinstellung.</string>
+    <string name="mode_help_nxdomain">Namensabfragen erhalten eine echte negative Antwort statt Schweigen. Verursachte den geringsten Wiederholungsverkehr der drei.</string>
+    <string name="protected_reason_push">Liefert alle Ihre Benachrichtigungen</string>
+    <string name="protected_reason_calls">Anrufe und Nachrichten</string>
+    <string name="protected_reason_self">Diese App</string>
+    <string name="row_restricted_saved">%1$s · gespart ~%2$s</string>
+    <string name="row_usage">%1$s mobil · %2$s im Hintergrund</string>
+    <string name="notif_channel">Blockier-Engine</string>
+    <string name="notif_starting">Wird gestartet…</string>
+    <string name="toast_settings_failed">Einstellungen konnten nicht geöffnet werden</string>
+    <string name="toast_nothing_background">Derzeit ist nichts stark im Hintergrund aktiv</string>
+    <string name="toast_restrict_first">Schränken Sie zuerst mindestens eine App ein</string>
+    <string name="toast_vpn_required">Zum Einschränken von Apps ist eine Berechtigung erforderlich</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">%1$d App im WLAN blockiert</item>
+        <item quantity="other">%1$d Apps im WLAN blockiert</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">%1$d App bei mobilen Daten blockiert</item>
+        <item quantity="other">%1$d Apps bei mobilen Daten blockiert</item>
+    </plurals>
+</resources>

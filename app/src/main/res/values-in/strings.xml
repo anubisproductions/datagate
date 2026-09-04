@@ -39,7 +39,7 @@
     <string name="blocking_title">Pemblokiran</string>
     <string name="blocking_hint">Pilih jaringan mana yang boleh dipakai tiap aplikasi. Pada kuota terbatas, jawaban yang biasa adalah “tanpa data seluler, Wi‑Fi tidak masalah”.</string>
     <string name="blocking_none">Tidak ada yang diblokir</string>
-    <string name="blocking_active">Aktif · %1$d diblokir di Wi‑Fi, %2$d di seluler</string>
+    <string name="blocking_active">Aktif · Wi‑Fi: %1$d · Seluler: %2$d</string>
     <string name="blocking_inactive">Aturan tersimpan, tetapi belum aktif — izin diperlukan</string>
     <string name="blocked_everywhere">Diblokir di Wi‑Fi dan seluler</string>
     <string name="blocked_mobile_only">Diblokir hanya di data seluler</string>

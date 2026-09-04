@@ -39,7 +39,7 @@
     <string name="blocking_title">ब्लॉकिंग</string>
     <string name="blocking_hint">चुनें कि हर ऐप कौन-से नेटवर्क इस्तेमाल कर सकता है। सीमित डेटा पैक पर आम जवाब है “मोबाइल डेटा नहीं, वाई‑फ़ाई ठीक है”।</string>
     <string name="blocking_none">कुछ भी ब्लॉक नहीं</string>
-    <string name="blocking_active">सक्रिय · वाई‑फ़ाई पर %1$d, मोबाइल पर %2$d ब्लॉक</string>
+    <string name="blocking_active">सक्रिय · वाई‑फ़ाई: %1$d · मोबाइल: %2$d</string>
     <string name="blocking_inactive">नियम सेट हैं, पर सक्रिय नहीं — अनुमति ज़रूरी है</string>
     <string name="blocked_everywhere">वाई‑फ़ाई और मोबाइल दोनों पर ब्लॉक</string>
     <string name="blocked_mobile_only">सिर्फ़ मोबाइल डेटा पर ब्लॉक</string>

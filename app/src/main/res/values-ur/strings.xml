@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Urdu - right to left -->
+<resources>
+    <string name="app_name">ڈیٹا سیور</string>
+    <string name="onboard_title">ایک اجازت، پھر کام مکمل</string>
+    <string name="onboard_body">اینڈرائیڈ ہر ایپ کے ڈیٹا اعداد و شمار کو Usage access نامی ترتیب کے پیچھے رکھتا ہے۔ اس کے بغیر یہ ایپ نہیں دیکھ سکتی کہ کون سی ایپس آپ کا ڈیٹا خرچ کر رہی ہیں۔\n\nیہ وہی شمار پڑھتی ہے جو پہلے سے آپ کے فون پر موجود ہیں۔ کچھ بھی اپ لوڈ نہیں ہوتا — اس ایپ کے پاس انٹرنیٹ کی اجازت سرے سے موجود ہی نہیں۔</string>
+    <string name="onboard_button">Usage access دیں</string>
+    <string name="onboard_hint">فہرست میں ”ڈیٹا سیور“ تلاش کریں، اسے آن کریں، پھر واپس آئیں۔</string>
+    <string name="cycle_label">اس سائیکل میں موبائل ڈیٹا</string>
+    <string name="of_bundle">%1$s بنڈل میں سے</string>
+    <string name="no_bundle_set">اپنا ماہانہ بنڈل مقرر کرنے کے لیے ٹیپ کریں</string>
+    <string name="plus_wifi">مزید %1$s وائی فائی پر</string>
+    <string name="since_date">%1$s سے</string>
+    <string name="background_label">پس منظر میں استعمال ہوا</string>
+    <string name="background_hint">وہ ڈیٹا جو ان ایپس نے خود سے خرچ کیا، جب آپ انہیں استعمال نہیں کر رہے تھے۔</string>
+    <string name="saved_label">تخمینی بچت</string>
+    <string name="saving_on">ڈیٹا کی بچت آن ہے</string>
+    <string name="saving_off">ڈیٹا کی بچت آف ہے</string>
+    <string name="restricted">محدود</string>
+    <string name="protected_app">محفوظ — آپ کی اطلاعات چلتی رکھتا ہے</string>
+    <string name="other_apps">دیگر اور سسٹم</string>
+    <string name="other_hint">وہ ٹریفک جسے اینڈرائیڈ کسی ایک ایپ سے منسوب نہیں کرتا۔ اس لیے دکھایا گیا ہے تاکہ یہ اعداد ترتیبات والے اعداد سے مل جائیں۔</string>
+    <string name="filter_all">سب</string>
+    <string name="filter_mobile">صرف موبائل</string>
+    <string name="filter_background">بدترین پس منظر</string>
+    <string name="restrict_all_heavy">پس منظر میں سب سے زیادہ خرچ کرنے والی ایپس محدود کریں</string>
+    <string name="search_hint">ایپس تلاش کریں</string>
+    <string name="set_bundle_title">ماہانہ موبائل بنڈل</string>
+    <string name="restricted_inactive">محدود — ابھی فعال نہیں</string>
+    <string name="saving_off_with_rules">قواعد مقرر ہیں مگر فعال نہیں — نافذ کرنے کے لیے آن کریں</string>
+    <string name="open_blocking">نیٹ ورک کے مطابق بلاکنگ ←</string>
+    <string name="blocking_title">بلاکنگ</string>
+    <string name="blocking_hint">منتخب کریں کہ ہر ایپ کون سے نیٹ ورک استعمال کر سکتی ہے۔ محدود بنڈل پر عام جواب یہ ہوتا ہے: ”موبائل ڈیٹا نہیں، وائی فائی ٹھیک ہے“۔</string>
+    <string name="blocking_none">کچھ بھی بلاک نہیں</string>
+    <string name="blocking_active">فعال · وائی فائی: %1$d · موبائل: %2$d</string>
+    <string name="blocking_inactive">قواعد مقرر ہیں مگر فعال نہیں — اجازت درکار ہے</string>
+    <string name="blocked_everywhere">وائی فائی اور موبائل دونوں پر بلاک</string>
+    <string name="blocked_mobile_only">صرف موبائل ڈیٹا پر بلاک</string>
+    <string name="blocked_wifi_only">صرف وائی فائی پر بلاک</string>
+    <string name="allowed">اجازت ہے</string>
+    <string name="col_wifi">وائی فائی</string>
+    <string name="col_mobile">موبائل</string>
+    <string name="consent_required">ایپس بلاک کرنے کے لیے اجازت درکار ہے</string>
+    <string name="loading_apps">ایپس لوڈ ہو رہی ہیں…</string>
+    <string name="mode_label">جب کوئی بلاک شدہ ایپ رابطے کی کوشش کرے</string>
+    <string name="mode_drop">نظرانداز کریں (سب سے خاموش)</string>
+    <string name="mode_refuse">فوراً انکار کریں</string>
+    <string name="mode_nxdomain">”ایسا کوئی پتہ نہیں“ جواب دیں (تجویز کردہ)</string>
+    <string name="mode_help_drop">پیکٹ ضائع کر دیے جاتے ہیں۔ ایپ اپنے وقت ختم ہونے تک انتظار کرتی ہے۔ زیادہ تر بلاکنگ ایپس یہی کرتی ہیں۔</string>
+    <string name="mode_help_refuse">رابطے فوراً مسترد کر دیے جاتے ہیں۔ حقیقی ٹریفک پر ماپنے سے ایپس جلد اور تقریباً 40%% زیادہ بار دوبارہ کوشش کرتی ہیں، اس لیے یہ طے شدہ انتخاب نہیں۔</string>
+    <string name="mode_help_nxdomain">نام کی تلاش کو خاموشی کے بجائے حقیقی منفی جواب ملتا ہے۔ تینوں میں سب سے کم دوبارہ کوشش کا ٹریفک ناپا گیا۔</string>
+    <string name="protected_reason_push">آپ کی تمام اطلاعات پہنچاتا ہے</string>
+    <string name="protected_reason_calls">کالیں اور پیغامات</string>
+    <string name="protected_reason_self">یہ ایپ</string>
+    <string name="row_restricted_saved">%1$s · بچایا ~%2$s</string>
+    <string name="row_usage">%1$s موبائل · %2$s پس منظر میں</string>
+    <string name="notif_channel">بلاکنگ انجن</string>
+    <string name="notif_starting">شروع ہو رہا ہے…</string>
+    <string name="toast_settings_failed">ترتیبات نہیں کھل سکیں</string>
+    <string name="toast_nothing_background">اس وقت پس منظر میں کچھ بھی زیادہ سرگرم نہیں</string>
+    <string name="toast_restrict_first">پہلے کم از کم ایک ایپ محدود کریں</string>
+    <string name="toast_vpn_required">ایپس محدود کرنے کے لیے اجازت درکار ہے</string>
+    <plurals name="notif_active_wifi">
+        <item quantity="one">وائی فائی پر %1$d ایپ محدود</item>
+        <item quantity="other">وائی فائی پر %1$d ایپس محدود</item>
+    </plurals>
+    <plurals name="notif_active_mobile">
+        <item quantity="one">موبائل ڈیٹا پر %1$d ایپ محدود</item>
+        <item quantity="other">موبائل ڈیٹا پر %1$d ایپس محدود</item>
+    </plurals>
+</resources>

@@ -41,7 +41,7 @@
     <string name="blocking_title">الحظر</string>
     <string name="blocking_hint">اختر الشبكات المسموح لكل تطبيق باستخدامها. مع الباقات المحدودة يكون الجواب عادةً “بدون بيانات الجوّال، والواي فاي مقبول”.</string>
     <string name="blocking_none">لا شيء محظور</string>
-    <string name="blocking_active">مفعّل · %1$d محظور على الواي فاي، %2$d على الجوّال</string>
+    <string name="blocking_active">فعّال · واي فاي: %1$d · الجوّال: %2$d</string>
     <string name="blocking_inactive">تم ضبط القواعد لكنها غير مفعّلة — الإذن مطلوب</string>
     <string name="blocked_everywhere">محظور على الواي فاي والجوّال</string>
     <string name="blocked_mobile_only">محظور على الجوّال فقط</string>

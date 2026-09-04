@@ -39,7 +39,7 @@
     <string name="blocking_title">Engelleme</string>
     <string name="blocking_hint">Her uygulamanın hangi ağları kullanabileceğini seçin. Sınırlı bir pakette olağan yanıt şudur: “mobil veri yok, Wi‑Fi sorun değil”.</string>
     <string name="blocking_none">Hiçbir şey engellenmedi</string>
-    <string name="blocking_active">Etkin · Wi‑Fi üzerinde %1$d, mobilde %2$d engellendi</string>
+    <string name="blocking_active">Etkin · Wi‑Fi: %1$d · Mobil: %2$d</string>
     <string name="blocking_inactive">Kurallar ayarlandı ama etkin değil — izin gerekiyor</string>
     <string name="blocked_everywhere">Wi‑Fi ve mobil veride engellendi</string>
     <string name="blocked_mobile_only">Yalnızca mobil veride engellendi</string>
