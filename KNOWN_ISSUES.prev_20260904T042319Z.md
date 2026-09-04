@@ -73,26 +73,15 @@ Android requires a trusted gesture for VPN consent. **A real finger is required*
 cannot be automated and any test harness must account for it. Not an app bug, but it blocks
 unattended end-to-end testing.
 
-### 7. Google Play Services is absent from the Blocking screen — FIXED
+### 7. Google Play Services is absent from the Blocking screen
 
-`AppRepository.load()` listed only apps with a launcher intent, and Play Services has none.
-The protection still held — an app that is not listed cannot be toggled — but the
-"your notifications keep working" reassurance was invisible on the one screen where it
-matters, and the store listing claimed those apps were "clearly marked", which was untrue.
+`AppRepository.load()` lists only apps with a launcher intent, and Play Services has none.
+The protection still holds — an app that is not listed cannot be toggled — but the
+"your notifications keep working" reassurance is invisible on that screen, and it is one of
+the app's better trust signals.
 
-**Fixed:** protected packages are appended to the list explicitly, disabled, with the reason
-on the row. Two related defects surfaced while verifying it:
-
-- `reasonFor()` had no case for our own package, so the Data Saver row read "Calls and
-  messages". It now reads "This app".
-- The reason strings were hardcoded English inside a UI translated into eight languages.
-  They are string resources now, localised in all nine locales.
-- `com.google.android.gms.location.history` was in the protected set but has its own uid
-  (10251 on the test device, against 10244 for Play Services and the Services Framework,
-  which share one). Blocking it therefore cannot affect notifications, so it was being
-  refused for no reason under a label claiming it delivered them. Removed from the set —
-  refusing to let a privacy-minded user block Google's location history works against the
-  entire pitch.
+**Fix:** show protected apps in the Blocking list as a disabled, clearly-labelled group even
+when they have no launcher entry.
 
 ### 8. Filter spinner label truncates
 

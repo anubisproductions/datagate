@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">बैकग्राउंड में सबसे ज़्यादा खर्च करने वालों को रोकें</string>
     <string name="search_hint">ऐप्स खोजें</string>
     <string name="set_bundle_title">मासिक मोबाइल डेटा पैक</string>
+    <string name="protected_reason_push">आपकी सभी सूचनाएँ पहुँचाता है</string>
+    <string name="protected_reason_calls">कॉल और संदेश</string>
+    <string name="protected_reason_self">यह ऐप</string>
 </resources>

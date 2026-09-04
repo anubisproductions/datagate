@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">Restreindre les plus gourmandes en arrière-plan</string>
     <string name="search_hint">Rechercher une appli</string>
     <string name="set_bundle_title">Forfait mensuel de données mobiles</string>
+    <string name="protected_reason_push">Achemine toutes vos notifications</string>
+    <string name="protected_reason_calls">Appels et messages</string>
+    <string name="protected_reason_self">Cette application</string>
 </resources>

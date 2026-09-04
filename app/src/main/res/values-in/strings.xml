@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">Batasi yang paling boros di latar belakang</string>
     <string name="search_hint">Cari aplikasi</string>
     <string name="set_bundle_title">Paket kuota seluler bulanan</string>
+    <string name="protected_reason_push">Mengirimkan semua notifikasi Anda</string>
+    <string name="protected_reason_calls">Panggilan dan pesan</string>
+    <string name="protected_reason_self">Aplikasi ini</string>
 </resources>

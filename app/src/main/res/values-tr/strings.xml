@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">Arka planda en çok harcayanları kısıtla</string>
     <string name="search_hint">Uygulama ara</string>
     <string name="set_bundle_title">Aylık mobil veri paketi</string>
+    <string name="protected_reason_push">Tüm bildirimlerinizi iletir</string>
+    <string name="protected_reason_calls">Aramalar ve mesajlar</string>
+    <string name="protected_reason_self">Bu uygulama</string>
 </resources>

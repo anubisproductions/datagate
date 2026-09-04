@@ -46,7 +46,29 @@ object AppRepository {
                 label = label,
                 icon = icon,
                 isProtected = isProtected,
-                protectedReason = if (isProtected) Protected.reasonFor(pkg) else "",
+                protectedReason = if (isProtected) Protected.reasonFor(ctx, pkg) else "",
+            )
+        }
+
+        /*
+         * Protected apps with no launcher entry - Play Services above all - are invisible
+         * to the query above, so the guard was doing its job silently. That is backwards:
+         * Play Services is the one entry that explains why the list is guarded at all, and
+         * a user who cannot see it has no reason to believe their notifications are safe.
+         * Listed here explicitly, disabled, with the reason on the row.
+         */
+        for (pkg in guarded) {
+            if (pkg in seen) continue
+            val appInfo = runCatching { pm.getApplicationInfo(pkg, 0) }.getOrNull() ?: continue
+            if (!appInfo.enabled) continue
+            seen += pkg
+
+            out += AppEntry(
+                packageName = pkg,
+                label = runCatching { pm.getApplicationLabel(appInfo).toString() }.getOrNull() ?: pkg,
+                icon = runCatching { pm.getApplicationIcon(appInfo) }.getOrNull(),
+                isProtected = true,
+                protectedReason = Protected.reasonFor(ctx, pkg),
             )
         }
 

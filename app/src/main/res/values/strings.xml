@@ -61,4 +61,7 @@
     <string name="mode_help_drop">Packets are discarded. The app waits on its own timeout. This is what most blocking apps do.</string>
     <string name="mode_help_refuse">Connections are rejected at once. Measured on real traffic this made apps retry sooner and about 40%% more often, so it is not the default.</string>
     <string name="mode_help_nxdomain">Name lookups get a real negative answer instead of silence. Measured the lowest retry traffic of the three.</string>
+    <string name="protected_reason_push">Delivers all your notifications</string>
+    <string name="protected_reason_calls">Calls and messages</string>
+    <string name="protected_reason_self">This app</string>
 </resources>

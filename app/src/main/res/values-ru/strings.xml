@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">Ограничить самых прожорливых в фоне</string>
     <string name="search_hint">Поиск приложений</string>
     <string name="set_bundle_title">Месячный пакет мобильного трафика</string>
+    <string name="protected_reason_push">Доставляет все ваши уведомления</string>
+    <string name="protected_reason_calls">Звонки и сообщения</string>
+    <string name="protected_reason_self">Это приложение</string>
 </resources>

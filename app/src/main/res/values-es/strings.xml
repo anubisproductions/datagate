@@ -30,4 +30,7 @@
     <string name="restrict_all_heavy">Restringir las que más gastan en segundo plano</string>
     <string name="search_hint">Buscar apps</string>
     <string name="set_bundle_title">Plan mensual de datos móviles</string>
+    <string name="protected_reason_push">Entrega todas tus notificaciones</string>
+    <string name="protected_reason_calls">Llamadas y mensajes</string>
+    <string name="protected_reason_self">Esta aplicación</string>
 </resources>

@@ -23,10 +23,19 @@ import android.telecom.TelecomManager
  */
 object Protected {
 
+    /*
+     * Both entries share one uid on every device checked (10244 here), so blocking either
+     * blocks the socket that carries push for the whole device. The uid is what the tunnel
+     * actually filters on, which is why the pair has to be guarded together.
+     *
+     * com.google.android.gms.location.history was in this set and has been removed. It has
+     * its own uid (10251 here), so blocking it cannot affect notifications - it was being
+     * refused for no reason, under a label claiming it delivered them. Refusing to let a
+     * privacy-minded user block Google's location history is the opposite of the point.
+     */
     private val ALWAYS = setOf(
         "com.google.android.gms",       // Play Services - carries all FCM push
-        "com.google.android.gsf",       // Services Framework
-        "com.google.android.gms.location.history",
+        "com.google.android.gsf",       // Services Framework - same uid as the above
     )
 
     /** Resolved lazily: the dialer and SMS handler differ per device. */
@@ -45,9 +54,19 @@ object Protected {
         return out
     }
 
-    fun reasonFor(pkg: String): String = when (pkg) {
-        "com.google.android.gms", "com.google.android.gsf" ->
-            "Delivers all your notifications"
-        else -> "Calls and messages"
+    /**
+     * Why this app cannot be blocked, in the user's own language.
+     *
+     * Takes a context rather than a bare package name for two reasons: these strings are
+     * translated into every locale the app ships in, and our own package name is only
+     * knowable at runtime. Without the first case our own row read "Calls and messages",
+     * which is simply untrue.
+     */
+    fun reasonFor(ctx: Context, pkg: String): String = when (pkg) {
+        ctx.packageName -> ctx.getString(R.string.protected_reason_self)
+        "com.google.android.gms",
+        "com.google.android.gsf" ->
+            ctx.getString(R.string.protected_reason_push)
+        else -> ctx.getString(R.string.protected_reason_calls)
     }
 }

@@ -32,4 +32,7 @@
     <string name="restrict_all_heavy">تقييد أكثر التطبيقات استهلاكًا في الخلفية</string>
     <string name="search_hint">ابحث عن تطبيق</string>
     <string name="set_bundle_title">باقة بيانات الجوّال الشهرية</string>
+    <string name="protected_reason_push">يوصّل كل إشعاراتك</string>
+    <string name="protected_reason_calls">المكالمات والرسائل</string>
+    <string name="protected_reason_self">هذا التطبيق</string>
 </resources>
