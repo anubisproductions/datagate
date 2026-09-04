@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Экономия трафика</string>
+
+    <string name="onboard_title">Одно разрешение — и всё</string>
+    <string name="onboard_body">Android хранит расход трафика по приложениям за настройкой «Доступ к данным об использовании». Без неё это приложение не видит, какие программы тратят ваш трафик.\n\nОно читает счётчики, которые уже есть в вашем телефоне. Ничего не отправляется — у этого приложения вообще нет разрешения на интернет.</string>
+    <string name="onboard_button">Предоставить доступ</string>
+    <string name="onboard_hint">Найдите «Экономия трафика» в списке, включите и вернитесь сюда.</string>
+
+    <string name="cycle_label">Мобильный трафик за период</string>
+    <string name="of_bundle">из пакета %1$s</string>
+    <string name="no_bundle_set">Нажмите, чтобы указать месячный пакет</string>
+    <string name="plus_wifi">плюс %1$s по Wi‑Fi</string>
+    <string name="since_date">с %1$s</string>
+    <string name="background_label">Потрачено в фоне</string>
+    <string name="background_hint">Трафик, который эти приложения потратили сами, пока вы ими не пользовались.</string>
+    <string name="saved_label">Примерно сэкономлено</string>
+    <string name="saving_on">Экономия включена</string>
+    <string name="saving_off">Экономия выключена</string>
+
+    <string name="restricted">Ограничено</string>
+    <string name="protected_app">Защищено — сохраняет ваши уведомления</string>
+    <string name="other_apps">Прочее и система</string>
+    <string name="other_hint">Трафик, который Android не относит к одному приложению. Показан, чтобы эти цифры совпадали с настройками системы.</string>
+
+    <string name="filter_all">Все</string>
+    <string name="filter_mobile">Только мобильный трафик</string>
+    <string name="filter_background">Худшие в фоне</string>
+
+    <string name="restrict_all_heavy">Ограничить самых прожорливых в фоне</string>
+    <string name="search_hint">Поиск приложений</string>
+    <string name="set_bundle_title">Месячный пакет мобильного трафика</string>
+</resources>

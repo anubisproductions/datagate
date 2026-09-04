@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Mirrors company/brand/colors.md, which is the studio source of truth.
+
+  Only the accent colour is used inside the data UI - as the
+  single accent for the restricted state. The rest exist for the icon, splash and any
+  branded surface. Nothing here is pure black or pure white; colors.md forbids both.
+-->
+<resources>
+    <!-- Studio identity -->
+    <color name="anubis_gold">#D4AF37</color>
+    <color name="anubis_tomb">#3A342A</color>
+    <color name="anubis_linen">#F5EDD8</color>
+    <color name="anubis_sandstone">#E8D6A6</color>
+    <color name="anubis_lapis">#1E4E8C</color>
+    <color name="anubis_carnelian">#B43A2E</color>
+    <color name="anubis_malachite">#1F7A4D</color>
+
+    <!-- Semantic, for the data UI. Deliberately neutral apart from the gold accent. -->
+    <!--
+      Utilities line (company/brand/brand_architecture.md 5): tomb stone on sandstone with a
+      malachite accent. Malachite rather than gold on purpose - in a data saver green already
+      means "saved", so the brand accent and the semantic colour are the same thing instead
+      of competing for meaning.
+    -->
+    <color name="accent_restricted">@color/anubis_malachite</color>
+    <color name="bar_background_share">@color/anubis_carnelian</color>
+    <color name="splash_background">@color/anubis_sandstone</color>
+</resources>

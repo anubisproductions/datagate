@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Economia de dados</string>
+
+    <string name="onboard_title">Uma permissão e pronto</string>
+    <string name="onboard_body">O Android guarda o consumo de dados de cada aplicativo atrás de uma configuração chamada «Acesso de uso». Sem ela, este aplicativo não consegue ver quais apps estão gastando seus dados.\n\nEle lê contadores que já existem no seu celular. Nada é enviado — este aplicativo não tem nenhuma permissão de internet.</string>
+    <string name="onboard_button">Conceder acesso de uso</string>
+    <string name="onboard_hint">Encontre «Economia de dados» na lista, ative e volte aqui.</string>
+
+    <string name="cycle_label">Dados móveis neste ciclo</string>
+    <string name="of_bundle">de %1$s do plano</string>
+    <string name="no_bundle_set">Toque para definir seu plano mensal</string>
+    <string name="plus_wifi">mais %1$s no Wi‑Fi</string>
+    <string name="since_date">desde %1$s</string>
+    <string name="background_label">Usado em segundo plano</string>
+    <string name="background_hint">Dados que estes apps gastaram sozinhos, enquanto você não os usava.</string>
+    <string name="saved_label">Economia estimada</string>
+    <string name="saving_on">Economia de dados ativada</string>
+    <string name="saving_off">Economia de dados desativada</string>
+
+    <string name="restricted">Restrito</string>
+    <string name="protected_app">Protegido — mantém suas notificações</string>
+    <string name="other_apps">Outros e sistema</string>
+    <string name="other_hint">Tráfego que o Android não atribui a um app específico. Mostrado para que estes números batam com os das Configurações.</string>
+
+    <string name="filter_all">Todos</string>
+    <string name="filter_mobile">Somente dados móveis</string>
+    <string name="filter_background">Piores em segundo plano</string>
+
+    <string name="restrict_all_heavy">Restringir os que mais gastam em segundo plano</string>
+    <string name="search_hint">Buscar apps</string>
+    <string name="set_bundle_title">Franquia mensal de dados móveis</string>
+</resources>

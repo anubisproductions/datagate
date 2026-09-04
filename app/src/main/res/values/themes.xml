@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Utilities line. Studio identity on the icon and splash; neutral in the data UI. The
+      accent appears only as colorAccent, which tints the switches and progress bars - the
+      single accent marking restricted state.
+    -->
+    <style name="Theme.DataGate" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+        <item name="android:colorAccent">@color/anubis_malachite</item>
+    </style>
+
+    <style name="Theme.DataGate.Splash" parent="Theme.DataGate">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

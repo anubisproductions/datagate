@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ahorro de datos</string>
+
+    <string name="onboard_title">Un permiso y listo</string>
+    <string name="onboard_body">Android guarda el consumo de datos de cada aplicación detrás de un ajuste llamado «Acceso de uso». Sin él, esta aplicación no puede ver qué apps están gastando tus datos.\n\nLee contadores que ya están en tu teléfono. No se sube nada: esta aplicación no tiene ningún permiso de internet.</string>
+    <string name="onboard_button">Conceder acceso de uso</string>
+    <string name="onboard_hint">Busca «Ahorro de datos» en la lista, actívalo y vuelve aquí.</string>
+
+    <string name="cycle_label">Datos móviles de este ciclo</string>
+    <string name="of_bundle">de %1$s contratados</string>
+    <string name="no_bundle_set">Toca para indicar tu plan mensual</string>
+    <string name="plus_wifi">más %1$s por Wi‑Fi</string>
+    <string name="since_date">desde el %1$s</string>
+    <string name="background_label">Usado en segundo plano</string>
+    <string name="background_hint">Datos que estas apps gastaron por su cuenta, mientras no las usabas.</string>
+    <string name="saved_label">Ahorro estimado</string>
+    <string name="saving_on">El ahorro de datos está activado</string>
+    <string name="saving_off">El ahorro de datos está desactivado</string>
+
+    <string name="restricted">Restringida</string>
+    <string name="protected_app">Protegida: mantiene tus notificaciones</string>
+    <string name="other_apps">Otros y sistema</string>
+    <string name="other_hint">Tráfico que Android no atribuye a una sola app. Se muestra para que estas cifras coincidan con las de Ajustes.</string>
+
+    <string name="filter_all">Todas</string>
+    <string name="filter_mobile">Solo datos móviles</string>
+    <string name="filter_background">Peores en segundo plano</string>
+
+    <string name="restrict_all_heavy">Restringir las que más gastan en segundo plano</string>
+    <string name="search_hint">Buscar apps</string>
+    <string name="set_bundle_title">Plan mensual de datos móviles</string>
+</resources>

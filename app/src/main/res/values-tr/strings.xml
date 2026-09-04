@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veri Tasarrufu</string>
+
+    <string name="onboard_title">Tek bir izin, hepsi bu</string>
+    <string name="onboard_body">Android, uygulama başına veri kullanım rakamlarını «Kullanım erişimi» adlı bir ayarın arkasında tutar. Bu izin olmadan bu uygulama hangi uygulamaların verinizi harcadığını göremez.\n\nTelefonunuzda zaten bulunan sayaçları okur. Hiçbir şey yüklenmez — bu uygulamanın internet izni hiç yok.</string>
+    <string name="onboard_button">Kullanım erişimi ver</string>
+    <string name="onboard_hint">Listede «Veri Tasarrufu»nu bulun, açın ve buraya dönün.</string>
+
+    <string name="cycle_label">Bu dönemdeki mobil veri</string>
+    <string name="of_bundle">%1$s paketten</string>
+    <string name="no_bundle_set">Aylık paketinizi ayarlamak için dokunun</string>
+    <string name="plus_wifi">ayrıca Wi‑Fi üzerinden %1$s</string>
+    <string name="since_date">%1$s tarihinden beri</string>
+    <string name="background_label">Arka planda kullanılan</string>
+    <string name="background_hint">Bu uygulamaların siz kullanmazken kendi başlarına harcadığı veri.</string>
+    <string name="saved_label">Tahmini tasarruf</string>
+    <string name="saving_on">Veri tasarrufu açık</string>
+    <string name="saving_off">Veri tasarrufu kapalı</string>
+
+    <string name="restricted">Kısıtlandı</string>
+    <string name="protected_app">Korumalı — bildirimlerinizin gelmesini sağlar</string>
+    <string name="other_apps">Diğer ve sistem</string>
+    <string name="other_hint">Android\'in tek bir uygulamaya atamadığı trafik. Bu rakamların Ayarlar\'dakilerle uyuşması için gösteriliyor.</string>
+
+    <string name="filter_all">Tümü</string>
+    <string name="filter_mobile">Yalnızca mobil veri</string>
+    <string name="filter_background">Arka planda en kötüler</string>
+
+    <string name="restrict_all_heavy">Arka planda en çok harcayanları kısıtla</string>
+    <string name="search_hint">Uygulama ara</string>
+    <string name="set_bundle_title">Aylık mobil veri paketi</string>
+</resources>

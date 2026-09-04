@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Économiseur de données</string>
+
+    <string name="onboard_title">Une autorisation, et c\'est tout</string>
+    <string name="onboard_body">Android conserve la consommation de données de chaque application derrière un réglage appelé « Accès aux données d\'utilisation ». Sans lui, cette application ne peut pas voir quelles applis consomment vos données.\n\nElle lit des compteurs déjà présents sur votre téléphone. Rien n\'est envoyé — cette application n\'a aucune autorisation Internet.</string>
+    <string name="onboard_button">Accorder l\'accès à l\'utilisation</string>
+    <string name="onboard_hint">Trouvez « Économiseur de données » dans la liste, activez-le, puis revenez.</string>
+
+    <string name="cycle_label">Données mobiles ce cycle</string>
+    <string name="of_bundle">sur %1$s du forfait</string>
+    <string name="no_bundle_set">Appuyez pour indiquer votre forfait mensuel</string>
+    <string name="plus_wifi">plus %1$s en Wi‑Fi</string>
+    <string name="since_date">depuis le %1$s</string>
+    <string name="background_label">Consommé en arrière-plan</string>
+    <string name="background_hint">Données que ces applis ont dépensées d\'elles-mêmes, sans que vous les utilisiez.</string>
+    <string name="saved_label">Économie estimée</string>
+    <string name="saving_on">L\'économiseur est activé</string>
+    <string name="saving_off">L\'économiseur est désactivé</string>
+
+    <string name="restricted">Restreinte</string>
+    <string name="protected_app">Protégée — préserve vos notifications</string>
+    <string name="other_apps">Autres et système</string>
+    <string name="other_hint">Trafic qu\'Android n\'attribue à aucune appli précise. Affiché pour que ces chiffres correspondent à ceux des Paramètres.</string>
+
+    <string name="filter_all">Toutes</string>
+    <string name="filter_mobile">Données mobiles seulement</string>
+    <string name="filter_background">Pires en arrière-plan</string>
+
+    <string name="restrict_all_heavy">Restreindre les plus gourmandes en arrière-plan</string>
+    <string name="search_hint">Rechercher une appli</string>
+    <string name="set_bundle_title">Forfait mensuel de données mobiles</string>
+</resources>

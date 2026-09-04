@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">डेटा सेवर</string>
+
+    <string name="onboard_title">बस एक अनुमति, फिर हो गया</string>
+    <string name="onboard_body">Android हर ऐप का डेटा खर्च «उपयोग पहुँच» (Usage access) नाम की सेटिंग के पीछे रखता है। इसके बिना यह ऐप नहीं देख सकता कि कौन-से ऐप आपका डेटा खर्च कर रहे हैं।\n\nयह आपके फ़ोन में पहले से मौजूद काउंटर पढ़ता है। कुछ भी अपलोड नहीं होता — इस ऐप के पास इंटरनेट की अनुमति है ही नहीं।</string>
+    <string name="onboard_button">उपयोग पहुँच दें</string>
+    <string name="onboard_hint">सूची में «डेटा सेवर» ढूँढें, उसे चालू करें और वापस आएँ।</string>
+
+    <string name="cycle_label">इस चक्र में मोबाइल डेटा</string>
+    <string name="of_bundle">%1$s के पैक में से</string>
+    <string name="no_bundle_set">अपना मासिक पैक सेट करने के लिए टैप करें</string>
+    <string name="plus_wifi">साथ ही Wi‑Fi पर %1$s</string>
+    <string name="since_date">%1$s से</string>
+    <string name="background_label">बैकग्राउंड में खर्च</string>
+    <string name="background_hint">वह डेटा जो इन ऐप्स ने खुद ही खर्च किया, जब आप उन्हें इस्तेमाल नहीं कर रहे थे।</string>
+    <string name="saved_label">अनुमानित बचत</string>
+    <string name="saving_on">डेटा बचत चालू है</string>
+    <string name="saving_off">डेटा बचत बंद है</string>
+
+    <string name="restricted">प्रतिबंधित</string>
+    <string name="protected_app">सुरक्षित — आपकी सूचनाएँ चालू रखता है</string>
+    <string name="other_apps">अन्य और सिस्टम</string>
+    <string name="other_hint">वह ट्रैफ़िक जिसे Android किसी एक ऐप से नहीं जोड़ता। इसे इसलिए दिखाया जाता है ताकि ये आँकड़े सेटिंग्स वाले आँकड़ों से मेल खाएँ।</string>
+
+    <string name="filter_all">सभी</string>
+    <string name="filter_mobile">केवल मोबाइल डेटा</string>
+    <string name="filter_background">बैकग्राउंड में सबसे ज़्यादा</string>
+
+    <string name="restrict_all_heavy">बैकग्राउंड में सबसे ज़्यादा खर्च करने वालों को रोकें</string>
+    <string name="search_hint">ऐप्स खोजें</string>
+    <string name="set_bundle_title">मासिक मोबाइल डेटा पैक</string>
+</resources>

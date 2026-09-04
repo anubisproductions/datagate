@@ -1,0 +1,8 @@
+# Normalise to LF in the repository regardless of the checkout platform, so contributors on
+# other systems do not see whole-file diffs.
+* text=auto eol=lf
+*.png binary
+*.jks binary
+*.ttf binary
+gradlew text eol=lf
+gradlew.bat text eol=crlf

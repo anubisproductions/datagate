@@ -1,0 +1,24 @@
+# Android / Gradle
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Signing credentials. The keystore itself lives OUTSIDE this repo (../keystore/) so it
+# cannot be published by accident; this file only points at it and holds the passwords.
+keystore.properties
+
+# OS
+Thumbs.db
+.DS_Store
+
+# M0 raw capture
+m0_runs/

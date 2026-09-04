@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pre-API-31 splash. Android's SplashScreen API only exists from 31, so below that the
+     window background stands in. Static by design: the platform splash cannot play video,
+     and a timed intro is friction on an app people open to check one number. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/anubis_sandstone" />
+    <item android:gravity="center">
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher_foreground" />
+    </item>
+</layer-list>

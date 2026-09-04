@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Data Saver</string>
+
+    <!-- Onboarding -->
+    <string name="onboard_title">One permission, then you\'re done</string>
+    <string name="onboard_body">Android keeps per-app data figures behind a setting called Usage access. Without it this app cannot see which apps are spending your data.\n\nIt reads counters that are already on your phone. Nothing is uploaded — this app has no internet permission at all.</string>
+    <string name="onboard_button">Grant Usage access</string>
+    <string name="onboard_hint">Find “Data Saver” in the list and turn it on, then come back.</string>
+
+    <!-- Dashboard -->
+    <string name="cycle_label">Mobile data this cycle</string>
+    <string name="of_bundle">of %1$s bundle</string>
+    <string name="no_bundle_set">Tap to set your monthly bundle</string>
+    <string name="plus_wifi">plus %1$s on Wi‑Fi</string>
+    <string name="since_date">since %1$s</string>
+    <string name="background_label">Used in the background</string>
+    <string name="background_hint">Data these apps spent on their own, while you weren\'t using them.</string>
+    <string name="saved_label">Estimated saved</string>
+    <string name="saving_on">Data saving is on</string>
+    <string name="saving_off">Data saving is off</string>
+
+    <string name="restricted">Restricted</string>
+    <string name="protected_app">Protected — keeps your notifications working</string>
+    <string name="other_apps">Other &amp; system</string>
+    <string name="other_hint">Traffic Android does not attribute to a single app. Shown so these figures add up to the ones in Settings.</string>
+
+    <string name="filter_all">All</string>
+    <string name="filter_mobile">Mobile only</string>
+    <string name="filter_background">Worst background</string>
+
+    <string name="restrict_all_heavy">Restrict top background offenders</string>
+    <string name="search_hint">Search apps</string>
+    <string name="set_bundle_title">Monthly mobile bundle</string>
+
+    <!-- Truthfulness about enforcement: see KNOWN_ISSUES 1 -->
+    <string name="restricted_inactive">Restricted — not active yet</string>
+    <string name="saving_off_with_rules">Rules set, but not active — turn on to enforce</string>
+
+    <!-- Access control (per-network) -->
+    <string name="open_blocking">Per-network blocking →</string>
+    <string name="blocking_title">Blocking</string>
+    <string name="blocking_hint">Choose which networks each app may use. On a metered bundle the usual answer is “no mobile data, Wi‑Fi is fine”.</string>
+    <string name="blocking_none">Nothing blocked</string>
+    <string name="blocking_active">Active · %1$d blocked on Wi‑Fi, %2$d on mobile</string>
+    <string name="blocking_inactive">Rules set, but not active — permission is required</string>
+    <string name="blocked_everywhere">Blocked on Wi‑Fi and mobile</string>
+    <string name="blocked_mobile_only">Blocked on mobile only</string>
+    <string name="blocked_wifi_only">Blocked on Wi‑Fi only</string>
+    <string name="allowed">Allowed</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Mobile</string>
+    <string name="consent_required">Permission is required to block apps</string>
+    <string name="loading_apps">Loading apps…</string>
+
+    <!-- Block modes -->
+    <string name="mode_label">When a blocked app tries to connect</string>
+    <string name="mode_drop">Ignore it (quietest)</string>
+    <string name="mode_refuse">Refuse it immediately</string>
+    <string name="mode_nxdomain">Answer “no such address” (recommended)</string>
+    <string name="mode_help_drop">Packets are discarded. The app waits on its own timeout. This is what most blocking apps do.</string>
+    <string name="mode_help_refuse">Connections are rejected at once. Measured on real traffic this made apps retry sooner and about 40%% more often, so it is not the default.</string>
+    <string name="mode_help_nxdomain">Name lookups get a real negative answer instead of silence. Measured the lowest retry traffic of the three.</string>
+</resources>

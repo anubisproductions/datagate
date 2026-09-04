@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Penghemat Kuota</string>
+
+    <string name="onboard_title">Satu izin saja, lalu selesai</string>
+    <string name="onboard_body">Android menyimpan angka pemakaian data tiap aplikasi di balik setelan bernama «Akses penggunaan». Tanpa itu, aplikasi ini tidak bisa melihat aplikasi mana yang menghabiskan kuota Anda.\n\nAplikasi ini membaca penghitung yang sudah ada di ponsel Anda. Tidak ada yang diunggah — aplikasi ini sama sekali tidak punya izin internet.</string>
+    <string name="onboard_button">Beri akses penggunaan</string>
+    <string name="onboard_hint">Cari «Penghemat Kuota» di daftar, aktifkan, lalu kembali ke sini.</string>
+
+    <string name="cycle_label">Kuota seluler siklus ini</string>
+    <string name="of_bundle">dari paket %1$s</string>
+    <string name="no_bundle_set">Ketuk untuk mengatur paket bulanan Anda</string>
+    <string name="plus_wifi">ditambah %1$s lewat Wi‑Fi</string>
+    <string name="since_date">sejak %1$s</string>
+    <string name="background_label">Terpakai di latar belakang</string>
+    <string name="background_hint">Kuota yang dihabiskan aplikasi ini sendiri, saat Anda tidak memakainya.</string>
+    <string name="saved_label">Perkiraan hemat</string>
+    <string name="saving_on">Penghematan kuota aktif</string>
+    <string name="saving_off">Penghematan kuota nonaktif</string>
+
+    <string name="restricted">Dibatasi</string>
+    <string name="protected_app">Dilindungi — menjaga notifikasi tetap masuk</string>
+    <string name="other_apps">Lainnya &amp; sistem</string>
+    <string name="other_hint">Trafik yang tidak dikaitkan Android ke satu aplikasi. Ditampilkan agar angka ini cocok dengan yang ada di Setelan.</string>
+
+    <string name="filter_all">Semua</string>
+    <string name="filter_mobile">Hanya kuota seluler</string>
+    <string name="filter_background">Terboros di latar belakang</string>
+
+    <string name="restrict_all_heavy">Batasi yang paling boros di latar belakang</string>
+    <string name="search_hint">Cari aplikasi</string>
+    <string name="set_bundle_title">Paket kuota seluler bulanan</string>
+</resources>
