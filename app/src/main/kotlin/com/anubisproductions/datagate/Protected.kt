@@ -24,6 +24,37 @@ import android.telecom.TelecomManager
 object Protected {
 
     /*
+     * Play Services is not the only push carrier, and assuming it is breaks the guard on
+     * exactly the phones the app is aimed at.
+     *
+     * Xiaomi, OPPO, vivo, Realme and Transsion dominate India, Indonesia, Pakistan, Egypt
+     * and Nigeria - every market this app has a listing for. Those phones run their own
+     * push service alongside (or instead of) Play Services, and a great many Chinese-market
+     * apps deliver notifications only through it. Blocking one of these is the same
+     * self-inflicted failure as blocking Play Services, just invisible to anyone testing on
+     * a Pixel.
+     *
+     * Deliberately excluded: vendor app stores, cloud-backup and account-sync services.
+     * They are heavy background consumers and blocking them costs the user nothing they
+     * will miss - the same reasoning that keeps the Play Store off this list. Only packages
+     * that carry push *for other apps* belong here.
+     *
+     * Protection is by package name and costs nothing when a package is absent:
+     * AppRepository skips anything not installed, so a Samsung sees only the Samsung entry.
+     */
+    private val VENDOR_PUSH = setOf(
+        "com.sec.spp.push",             // Samsung Push Service
+        "com.xiaomi.xmsf",              // Xiaomi Service Framework - carries MiPush
+        "com.huawei.hwid",              // HMS Core - Huawei Push
+        "com.hihonor.id",               // Honor's HMS equivalent, post-split
+        "com.hihonor.push",             // Honor Push
+        "com.heytap.mcs",               // OPPO / Realme / OnePlus push (current)
+        "com.coloros.mcs",              // the same service on older ColorOS builds
+        "com.vivo.pushservice",         // vivo Push
+        "com.meizu.cloud",              // Flyme Push
+    )
+
+    /*
      * Both entries share one uid on every device checked (10244 here), so blocking either
      * blocks the socket that carries push for the whole device. The uid is what the tunnel
      * actually filters on, which is why the pair has to be guarded together.
@@ -33,10 +64,12 @@ object Protected {
      * refused for no reason, under a label claiming it delivered them. Refusing to let a
      * privacy-minded user block Google's location history is the opposite of the point.
      */
-    private val ALWAYS = setOf(
+    private val GOOGLE_PUSH = setOf(
         "com.google.android.gms",       // Play Services - carries all FCM push
         "com.google.android.gsf",       // Services Framework - same uid as the above
     )
+
+    private val ALWAYS = GOOGLE_PUSH + VENDOR_PUSH
 
     /** Resolved lazily: the dialer and SMS handler differ per device. */
     fun setFor(ctx: Context): Set<String> {
@@ -62,10 +95,9 @@ object Protected {
      * knowable at runtime. Without the first case our own row read "Calls and messages",
      * which is simply untrue.
      */
-    fun reasonFor(ctx: Context, pkg: String): String = when (pkg) {
-        ctx.packageName -> ctx.getString(R.string.protected_reason_self)
-        "com.google.android.gms",
-        "com.google.android.gsf" ->
+    fun reasonFor(ctx: Context, pkg: String): String = when {
+        pkg == ctx.packageName -> ctx.getString(R.string.protected_reason_self)
+        pkg in GOOGLE_PUSH || pkg in VENDOR_PUSH ->
             ctx.getString(R.string.protected_reason_push)
         else -> ctx.getString(R.string.protected_reason_calls)
     }

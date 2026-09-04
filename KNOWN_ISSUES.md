@@ -130,3 +130,26 @@ speaker, and is exactly the machine-translation tell that costs this category it
 **Fixed:** `<plurals>` with the quantity classes each locale actually defines — six for
 Arabic, four for Russian, one for Turkish and Indonesian, which take a singular noun after a
 numeral. Verified on device: Arabic now renders "تطبيق واحد مقيّد على الواي فاي".
+
+### 13. Vendor push services were not protected
+
+`Protected` guarded only Google Play Services and the Services Framework, on the assumption
+that FCM carries every notification. That holds on a Pixel and not much else.
+
+Xiaomi, OPPO, vivo, Realme and Transsion dominate India, Indonesia, Pakistan, Egypt and
+Nigeria — every market this app has a listing for. Those devices run their own push service
+alongside or instead of Play Services, and many apps deliver notifications only through it.
+Blocking one was the same self-inflicted failure the Play Services guard exists to prevent,
+and invisible to anyone testing on stock Android.
+
+**Fixed:** nine vendor push packages added — Samsung, Xiaomi, Huawei, Honor (two), OPPO/Realme
+(current and legacy), vivo and Meizu. Vendor app stores, cloud backup and account sync were
+deliberately left out: they are heavy background consumers and blocking them costs the user
+nothing they will miss, the same reasoning that keeps the Play Store unprotected.
+
+**Not yet verified on hardware.** The package names come from vendor documentation, not from
+a device. The test phone is a Samsung, so only `com.sec.spp.push` can be confirmed locally,
+and it was disconnected when this landed. The other eight need a tester on each vendor's
+hardware — worth folding into closed-test recruitment. Protection is by package name and a
+wrong name is inert rather than harmful: `AppRepository` skips packages that are not
+installed, so a bad entry simply never appears.
