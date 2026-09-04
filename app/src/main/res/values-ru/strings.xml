@@ -76,4 +76,5 @@
         <item quantity="many">Заблокировано %1$d приложений в мобильной сети</item>
         <item quantity="other">Заблокировано %1$d приложения в мобильной сети</item>
     </plurals>
+    <string name="protected_reason_system">Часть самой системы Android</string>
 </resources>

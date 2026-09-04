@@ -70,4 +70,5 @@
     <plurals name="notif_active_mobile">
         <item quantity="other">%1$d aplikasi dibatasi di data seluler</item>
     </plurals>
+    <string name="protected_reason_system">Bagian dari Android itu sendiri</string>
 </resources>

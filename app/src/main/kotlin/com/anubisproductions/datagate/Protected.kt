@@ -1,7 +1,9 @@
 package com.anubisproductions.datagate
 
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Build
+import android.os.Process
 import android.provider.Telephony
 import android.telecom.TelecomManager
 
@@ -71,6 +73,29 @@ object Protected {
 
     private val ALWAYS = GOOGLE_PUSH + VENDOR_PUSH
 
+    private const val PER_USER_RANGE = 100000
+
+    /**
+     * True when this package runs on a uid below the first application uid - in practice
+     * the shared system uid, 1000.
+     *
+     * This matters because the tunnel filters by **uid**, not by package.
+     * addAllowedApplication("com.android.settings") does not capture Settings; it captures
+     * uid 1000, which on the test device is 78 packages including the connectivity checks,
+     * telephony components, fused location and tethering. Settings carries a launcher icon,
+     * so without this rule it appeared in the list as an ordinary blockable app, and one tap
+     * would have pulled the whole Android system into the tunnel.
+     *
+     * A named list would not do the job: which system components carry a launcher entry
+     * differs by OEM. The uid decides what actually gets captured, so the uid is what this
+     * checks.
+     *
+     * The modulo strips the user id - a work-profile app has uid userId * 100000 + appId.
+     */
+    fun isSystemUid(pm: PackageManager, pkg: String): Boolean = runCatching {
+        pm.getApplicationInfo(pkg, 0).uid % PER_USER_RANGE < Process.FIRST_APPLICATION_UID
+    }.getOrDefault(false)
+
     /** Resolved lazily: the dialer and SMS handler differ per device. */
     fun setFor(ctx: Context): Set<String> {
         val out = HashSet(ALWAYS)
@@ -99,6 +124,8 @@ object Protected {
         pkg == ctx.packageName -> ctx.getString(R.string.protected_reason_self)
         pkg in GOOGLE_PUSH || pkg in VENDOR_PUSH ->
             ctx.getString(R.string.protected_reason_push)
+        isSystemUid(ctx.packageManager, pkg) ->
+            ctx.getString(R.string.protected_reason_system)
         else -> ctx.getString(R.string.protected_reason_calls)
     }
 }

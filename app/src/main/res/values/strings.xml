@@ -80,4 +80,5 @@
         <item quantity="one">%1$d app restricted on mobile data</item>
         <item quantity="other">%1$d apps restricted on mobile data</item>
     </plurals>
+    <string name="protected_reason_system">Part of Android itself</string>
 </resources>

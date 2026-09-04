@@ -72,4 +72,5 @@
         <item quantity="one">%1$d app bloqueado nos dados móveis</item>
         <item quantity="other">%1$d apps bloqueados nos dados móveis</item>
     </plurals>
+    <string name="protected_reason_system">Faz parte do próprio Android</string>
 </resources>

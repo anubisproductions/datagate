@@ -39,7 +39,7 @@ object AppRepository {
                 ?: runCatching { pm.getApplicationLabel(pm.getApplicationInfo(pkg, 0)).toString() }.getOrNull()
                 ?: pkg
             val icon = runCatching { info.loadIcon(pm) }.getOrNull()
-            val isProtected = pkg in guarded
+            val isProtected = pkg in guarded || Protected.isSystemUid(pm, pkg)
 
             out += AppEntry(
                 packageName = pkg,

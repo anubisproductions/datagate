@@ -68,4 +68,5 @@
         <item quantity="one">موبائل ڈیٹا پر %1$d ایپ محدود</item>
         <item quantity="other">موبائل ڈیٹا پر %1$d ایپس محدود</item>
     </plurals>
+    <string name="protected_reason_system">اینڈرائیڈ سسٹم کا حصہ</string>
 </resources>

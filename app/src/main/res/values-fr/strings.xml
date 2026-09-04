@@ -72,4 +72,5 @@
         <item quantity="one">%1$d application restreinte en données mobiles</item>
         <item quantity="other">%1$d applications restreintes en données mobiles</item>
     </plurals>
+    <string name="protected_reason_system">Fait partie d\'Android lui-même</string>
 </resources>

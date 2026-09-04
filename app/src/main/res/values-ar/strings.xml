@@ -82,4 +82,5 @@
         <item quantity="many">%1$d تطبيقًا مقيّدًا على بيانات الجوّال</item>
         <item quantity="other">%1$d تطبيق مقيّد على بيانات الجوّال</item>
     </plurals>
+    <string name="protected_reason_system">جزء من نظام أندرويد نفسه</string>
 </resources>

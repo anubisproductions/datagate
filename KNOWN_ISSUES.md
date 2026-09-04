@@ -153,3 +153,30 @@ and it was disconnected when this landed. The other eight need a tester on each 
 hardware — worth folding into closed-test recruitment. Protection is by package name and a
 wrong name is inert rather than harmful: `AppRepository` skips packages that are not
 installed, so a bad entry simply never appears.
+
+### 14. Blocking a system-uid app would have captured all of Android — FIXED
+
+Found while verifying #13 on hardware.
+
+The tunnel filters by **uid**, not by package. `com.android.settings` runs on uid 1000, the
+shared system uid — 78 packages on the test device, including the connectivity checks,
+telephony components, fused location and tethering. Settings carries a launcher icon, so it
+appeared in the list as an ordinary blockable app. One tap would have pulled the entire
+Android system into the tunnel, and the resulting breakage would have been almost impossible
+for a user to attribute to this app.
+
+A named list would not fix it — which system components carry a launcher entry differs by
+OEM. The uid decides what actually gets captured, so the uid is what is now checked:
+`Protected.isSystemUid()` treats any package whose app id falls below
+`Process.FIRST_APPLICATION_UID` as protected, with the user id stripped so work profiles
+resolve correctly.
+
+**Fixed in two places, deliberately.** `AppRepository` marks such rows protected so the UI
+never offers them; `BlockVpnService` re-checks before `addAllowedApplication`, because rules
+live in SharedPreferences and outlive the screen that wrote them. A rule saved by an older
+build would otherwise still have been enforced. The screen decides what is offered; the
+service decides what is applied.
+
+Verified on device: Settings now renders greyed, toggles disabled, reason "Part of Android
+itself". The enforcement-side guard is logic-verified only — no stale rule for a protected
+package existed to exercise it.

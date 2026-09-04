@@ -68,4 +68,5 @@
         <item quantity="one">%1$d App bei mobilen Daten blockiert</item>
         <item quantity="other">%1$d Apps bei mobilen Daten blockiert</item>
     </plurals>
+    <string name="protected_reason_system">Teil von Android selbst</string>
 </resources>

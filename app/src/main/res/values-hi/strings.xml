@@ -72,4 +72,5 @@
         <item quantity="one">मोबाइल डेटा पर %1$d ऐप प्रतिबंधित</item>
         <item quantity="other">मोबाइल डेटा पर %1$d ऐप प्रतिबंधित</item>
     </plurals>
+    <string name="protected_reason_system">एंड्रॉइड सिस्टम का हिस्सा</string>
 </resources>

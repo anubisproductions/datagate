@@ -212,8 +212,22 @@ class BlockVpnService : VpnService() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) builder.setMetered(false)
 
+        /*
+         * The protection is re-checked here rather than trusted from the UI. Rules live in
+         * SharedPreferences and outlive any version of the screen that wrote them, so a rule
+         * saved before a package became protected would otherwise still be enforced - and
+         * for a system-uid package that means capturing all of uid 1000, which is most of
+         * Android. The screen decides what is offered; this decides what is applied.
+         */
+        val guarded = Protected.setFor(this)
+        val pm = packageManager
+
         val applied = ArrayList<String>()
         for (pkg in blocked) {
+            if (pkg in guarded || Protected.isSystemUid(pm, pkg)) {
+                Log.w(AttemptLog.TAG, "refusing to block protected package: $pkg")
+                continue
+            }
             try {
                 builder.addAllowedApplication(pkg)
                 applied += pkg

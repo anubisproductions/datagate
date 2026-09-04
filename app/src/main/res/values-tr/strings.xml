@@ -70,4 +70,5 @@
     <plurals name="notif_active_mobile">
         <item quantity="other">Mobil veride %1$d uygulama kısıtlandı</item>
     </plurals>
+    <string name="protected_reason_system">Android\'in kendi parçası</string>
 </resources>
