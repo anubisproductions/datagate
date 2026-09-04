@@ -22,3 +22,6 @@ Thumbs.db
 
 # M0 raw capture
 m0_runs/
+
+# Editor/tooling backups
+*.prev_*.md
