@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Tüm bildirimlerinizi iletir</string>
     <string name="protected_reason_calls">Aramalar ve mesajlar</string>
     <string name="protected_reason_self">Bu uygulama</string>
+    <string name="restricted_inactive">Kısıtlandı — henüz etkin değil</string>
+    <string name="saving_off_with_rules">Kurallar ayarlandı ama etkin değil — uygulamak için açın</string>
+    <string name="open_blocking">Ağa göre engelleme →</string>
+    <string name="blocking_title">Engelleme</string>
+    <string name="blocking_hint">Her uygulamanın hangi ağları kullanabileceğini seçin. Sınırlı bir pakette olağan yanıt şudur: “mobil veri yok, Wi‑Fi sorun değil”.</string>
+    <string name="blocking_none">Hiçbir şey engellenmedi</string>
+    <string name="blocking_active">Etkin · Wi‑Fi üzerinde %1$d, mobilde %2$d engellendi</string>
+    <string name="blocking_inactive">Kurallar ayarlandı ama etkin değil — izin gerekiyor</string>
+    <string name="blocked_everywhere">Wi‑Fi ve mobil veride engellendi</string>
+    <string name="blocked_mobile_only">Yalnızca mobil veride engellendi</string>
+    <string name="blocked_wifi_only">Yalnızca Wi‑Fi üzerinde engellendi</string>
+    <string name="allowed">İzin verildi</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Mobil</string>
+    <string name="consent_required">Uygulamaları engellemek için izin gerekiyor</string>
+    <string name="loading_apps">Uygulamalar yükleniyor…</string>
+    <string name="mode_label">Engellenen bir uygulama bağlanmaya çalıştığında</string>
+    <string name="mode_drop">Yok say (en sessiz)</string>
+    <string name="mode_refuse">Hemen reddet</string>
+    <string name="mode_nxdomain">“Böyle bir adres yok” yanıtı ver (önerilir)</string>
+    <string name="mode_help_drop">Paketler atılır ve uygulama kendi zaman aşımına kadar bekler. Çoğu engelleme uygulaması bunu yapar.</string>
+    <string name="mode_help_refuse">Bağlantılar anında reddedilir. Gerçek trafikte ölçüldüğünde uygulamalar daha erken ve yaklaşık %%40 daha sık yeniden denedi, bu yüzden varsayılan değil.</string>
+    <string name="mode_help_nxdomain">Ad sorguları sessizlik yerine gerçek bir olumsuz yanıt alır. Üçü arasında en az yeniden deneme trafiğini ölçtü.</string>
 </resources>

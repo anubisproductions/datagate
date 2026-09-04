@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Entrega todas as suas notificações</string>
     <string name="protected_reason_calls">Chamadas e mensagens</string>
     <string name="protected_reason_self">Este app</string>
+    <string name="restricted_inactive">Restrito — ainda não ativo</string>
+    <string name="saving_off_with_rules">Regras definidas, mas inativas — ative para aplicá-las</string>
+    <string name="open_blocking">Bloqueio por rede →</string>
+    <string name="blocking_title">Bloqueio</string>
+    <string name="blocking_hint">Escolha quais redes cada app pode usar. Em um pacote limitado, a resposta comum é “sem dados móveis, Wi‑Fi tudo bem”.</string>
+    <string name="blocking_none">Nada bloqueado</string>
+    <string name="blocking_active">Ativo · %1$d bloqueados no Wi‑Fi, %2$d nos dados móveis</string>
+    <string name="blocking_inactive">Regras definidas, mas inativas — é necessária permissão</string>
+    <string name="blocked_everywhere">Bloqueado no Wi‑Fi e nos dados móveis</string>
+    <string name="blocked_mobile_only">Bloqueado apenas nos dados móveis</string>
+    <string name="blocked_wifi_only">Bloqueado apenas no Wi‑Fi</string>
+    <string name="allowed">Permitido</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Móvel</string>
+    <string name="consent_required">É necessária permissão para bloquear apps</string>
+    <string name="loading_apps">Carregando apps…</string>
+    <string name="mode_label">Quando um app bloqueado tenta se conectar</string>
+    <string name="mode_drop">Ignorar (mais silencioso)</string>
+    <string name="mode_refuse">Recusar na hora</string>
+    <string name="mode_nxdomain">Responder “endereço inexistente” (recomendado)</string>
+    <string name="mode_help_drop">Os pacotes são descartados e o app espera até o próprio tempo limite. É o que a maioria dos apps de bloqueio faz.</string>
+    <string name="mode_help_refuse">As conexões são recusadas na hora. Medido em tráfego real, isso fez os apps tentarem de novo mais cedo e cerca de 40%% mais vezes, por isso não é o padrão.</string>
+    <string name="mode_help_nxdomain">As buscas de nome recebem uma resposta negativa real em vez de silêncio. Registrou o menor tráfego de novas tentativas entre os três.</string>
 </resources>

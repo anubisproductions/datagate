@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Mengirimkan semua notifikasi Anda</string>
     <string name="protected_reason_calls">Panggilan dan pesan</string>
     <string name="protected_reason_self">Aplikasi ini</string>
+    <string name="restricted_inactive">Dibatasi — belum aktif</string>
+    <string name="saving_off_with_rules">Aturan tersimpan, tetapi belum aktif — nyalakan untuk menerapkannya</string>
+    <string name="open_blocking">Pemblokiran per jaringan →</string>
+    <string name="blocking_title">Pemblokiran</string>
+    <string name="blocking_hint">Pilih jaringan mana yang boleh dipakai tiap aplikasi. Pada kuota terbatas, jawaban yang biasa adalah “tanpa data seluler, Wi‑Fi tidak masalah”.</string>
+    <string name="blocking_none">Tidak ada yang diblokir</string>
+    <string name="blocking_active">Aktif · %1$d diblokir di Wi‑Fi, %2$d di seluler</string>
+    <string name="blocking_inactive">Aturan tersimpan, tetapi belum aktif — izin diperlukan</string>
+    <string name="blocked_everywhere">Diblokir di Wi‑Fi dan seluler</string>
+    <string name="blocked_mobile_only">Diblokir hanya di data seluler</string>
+    <string name="blocked_wifi_only">Diblokir hanya di Wi‑Fi</string>
+    <string name="allowed">Diizinkan</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Seluler</string>
+    <string name="consent_required">Izin diperlukan untuk memblokir aplikasi</string>
+    <string name="loading_apps">Memuat aplikasi…</string>
+    <string name="mode_label">Saat aplikasi yang diblokir mencoba terhubung</string>
+    <string name="mode_drop">Abaikan saja (paling senyap)</string>
+    <string name="mode_refuse">Tolak seketika</string>
+    <string name="mode_nxdomain">Jawab “alamat tidak ditemukan” (disarankan)</string>
+    <string name="mode_help_drop">Paket dibuang dan aplikasi menunggu sampai waktu tunggunya sendiri habis. Ini yang dilakukan sebagian besar aplikasi pemblokir.</string>
+    <string name="mode_help_refuse">Koneksi ditolak seketika. Diukur pada trafik nyata, ini membuat aplikasi mencoba lagi lebih cepat dan sekitar 40%% lebih sering, jadi bukan pilihan bawaan.</string>
+    <string name="mode_help_nxdomain">Pencarian nama mendapat jawaban negatif yang sesungguhnya, bukan kesunyian. Tercatat trafik percobaan ulang paling sedikit dari ketiganya.</string>
 </resources>

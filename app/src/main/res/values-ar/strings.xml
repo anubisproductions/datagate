@@ -35,4 +35,27 @@
     <string name="protected_reason_push">يوصّل كل إشعاراتك</string>
     <string name="protected_reason_calls">المكالمات والرسائل</string>
     <string name="protected_reason_self">هذا التطبيق</string>
+    <string name="restricted_inactive">مقيّد — غير مفعّل بعد</string>
+    <string name="saving_off_with_rules">تم ضبط القواعد لكنها غير مفعّلة — شغّلها لتطبيقها</string>
+    <string name="open_blocking">الحظر حسب الشبكة ←</string>
+    <string name="blocking_title">الحظر</string>
+    <string name="blocking_hint">اختر الشبكات المسموح لكل تطبيق باستخدامها. مع الباقات المحدودة يكون الجواب عادةً “بدون بيانات الجوّال، والواي فاي مقبول”.</string>
+    <string name="blocking_none">لا شيء محظور</string>
+    <string name="blocking_active">مفعّل · %1$d محظور على الواي فاي، %2$d على الجوّال</string>
+    <string name="blocking_inactive">تم ضبط القواعد لكنها غير مفعّلة — الإذن مطلوب</string>
+    <string name="blocked_everywhere">محظور على الواي فاي والجوّال</string>
+    <string name="blocked_mobile_only">محظور على الجوّال فقط</string>
+    <string name="blocked_wifi_only">محظور على الواي فاي فقط</string>
+    <string name="allowed">مسموح</string>
+    <string name="col_wifi">واي فاي</string>
+    <string name="col_mobile">الجوّال</string>
+    <string name="consent_required">الإذن مطلوب لحظر التطبيقات</string>
+    <string name="loading_apps">جارٍ تحميل التطبيقات…</string>
+    <string name="mode_label">عندما يحاول تطبيق محظور الاتصال</string>
+    <string name="mode_drop">تجاهله (الأهدأ)</string>
+    <string name="mode_refuse">ارفضه فورًا</string>
+    <string name="mode_nxdomain">أجب بـ“لا يوجد هذا العنوان” (موصى به)</string>
+    <string name="mode_help_drop">تُهمَل الحزم ويظل التطبيق ينتظر حتى تنتهي مهلته. هذا ما تفعله معظم تطبيقات الحظر.</string>
+    <string name="mode_help_refuse">تُرفض الاتصالات فورًا. بالقياس على بيانات حقيقية جعل هذا التطبيقات تعيد المحاولة أسرع وبنحو 40%% أكثر، لذا ليس هو الخيار الافتراضي.</string>
+    <string name="mode_help_nxdomain">يحصل البحث عن الأسماء على إجابة سلبية حقيقية بدلًا من الصمت. سجّل أقل حركة إعادة محاولة بين الثلاثة.</string>
 </resources>

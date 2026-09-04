@@ -33,4 +33,27 @@
     <string name="protected_reason_push">आपकी सभी सूचनाएँ पहुँचाता है</string>
     <string name="protected_reason_calls">कॉल और संदेश</string>
     <string name="protected_reason_self">यह ऐप</string>
+    <string name="restricted_inactive">प्रतिबंधित — अभी सक्रिय नहीं</string>
+    <string name="saving_off_with_rules">नियम सेट हैं, पर सक्रिय नहीं — लागू करने के लिए चालू करें</string>
+    <string name="open_blocking">नेटवर्क के अनुसार ब्लॉकिंग →</string>
+    <string name="blocking_title">ब्लॉकिंग</string>
+    <string name="blocking_hint">चुनें कि हर ऐप कौन-से नेटवर्क इस्तेमाल कर सकता है। सीमित डेटा पैक पर आम जवाब है “मोबाइल डेटा नहीं, वाई‑फ़ाई ठीक है”।</string>
+    <string name="blocking_none">कुछ भी ब्लॉक नहीं</string>
+    <string name="blocking_active">सक्रिय · वाई‑फ़ाई पर %1$d, मोबाइल पर %2$d ब्लॉक</string>
+    <string name="blocking_inactive">नियम सेट हैं, पर सक्रिय नहीं — अनुमति ज़रूरी है</string>
+    <string name="blocked_everywhere">वाई‑फ़ाई और मोबाइल दोनों पर ब्लॉक</string>
+    <string name="blocked_mobile_only">सिर्फ़ मोबाइल डेटा पर ब्लॉक</string>
+    <string name="blocked_wifi_only">सिर्फ़ वाई‑फ़ाई पर ब्लॉक</string>
+    <string name="allowed">अनुमति है</string>
+    <string name="col_wifi">वाई‑फ़ाई</string>
+    <string name="col_mobile">मोबाइल</string>
+    <string name="consent_required">ऐप्स ब्लॉक करने के लिए अनुमति ज़रूरी है</string>
+    <string name="loading_apps">ऐप्स लोड हो रहे हैं…</string>
+    <string name="mode_label">जब कोई ब्लॉक किया ऐप कनेक्ट करने की कोशिश करे</string>
+    <string name="mode_drop">अनदेखा करें (सबसे शांत)</string>
+    <string name="mode_refuse">तुरंत अस्वीकार करें</string>
+    <string name="mode_nxdomain">“ऐसा कोई पता नहीं” जवाब दें (अनुशंसित)</string>
+    <string name="mode_help_drop">पैकेट छोड़ दिए जाते हैं और ऐप अपने टाइमआउट तक इंतज़ार करता है। ज़्यादातर ब्लॉकिंग ऐप्स यही करते हैं।</string>
+    <string name="mode_help_refuse">कनेक्शन तुरंत अस्वीकार होते हैं। असली ट्रैफ़िक पर मापने पर ऐप्स जल्दी और करीब 40%% ज़्यादा बार दोबारा कोशिश करते हैं, इसलिए यह डिफ़ॉल्ट नहीं है।</string>
+    <string name="mode_help_nxdomain">नाम खोज को चुप्पी के बजाय असली नकारात्मक जवाब मिलता है। तीनों में सबसे कम रीट्राई ट्रैफ़िक मापा गया।</string>
 </resources>

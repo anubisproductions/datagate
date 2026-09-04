@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Доставляет все ваши уведомления</string>
     <string name="protected_reason_calls">Звонки и сообщения</string>
     <string name="protected_reason_self">Это приложение</string>
+    <string name="restricted_inactive">Ограничено — ещё не активно</string>
+    <string name="saving_off_with_rules">Правила заданы, но не действуют — включите, чтобы применить</string>
+    <string name="open_blocking">Блокировка по сети →</string>
+    <string name="blocking_title">Блокировка</string>
+    <string name="blocking_hint">Выберите, какие сети может использовать каждое приложение. При лимитном тарифе обычный ответ — «без мобильного интернета, Wi‑Fi можно».</string>
+    <string name="blocking_none">Ничего не заблокировано</string>
+    <string name="blocking_active">Активно · %1$d заблокировано в Wi‑Fi, %2$d в мобильной сети</string>
+    <string name="blocking_inactive">Правила заданы, но не действуют — требуется разрешение</string>
+    <string name="blocked_everywhere">Заблокировано в Wi‑Fi и мобильной сети</string>
+    <string name="blocked_mobile_only">Заблокировано только в мобильной сети</string>
+    <string name="blocked_wifi_only">Заблокировано только в Wi‑Fi</string>
+    <string name="allowed">Разрешено</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Мобильная</string>
+    <string name="consent_required">Для блокировки приложений требуется разрешение</string>
+    <string name="loading_apps">Загрузка приложений…</string>
+    <string name="mode_label">Когда заблокированное приложение пытается подключиться</string>
+    <string name="mode_drop">Игнорировать (самый тихий)</string>
+    <string name="mode_refuse">Сразу отклонять</string>
+    <string name="mode_nxdomain">Отвечать «адрес не найден» (рекомендуется)</string>
+    <string name="mode_help_drop">Пакеты отбрасываются, приложение ждёт до собственного тайм-аута. Так делает большинство блокировщиков.</string>
+    <string name="mode_help_refuse">Соединения отклоняются сразу. На реальном трафике приложения начинали повторять попытки раньше и примерно на 40%% чаще, поэтому это не вариант по умолчанию.</string>
+    <string name="mode_help_nxdomain">Запросы имён получают настоящий отрицательный ответ вместо тишины. Показал наименьший объём повторных попыток из трёх.</string>
 </resources>

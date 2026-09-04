@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Entrega todas tus notificaciones</string>
     <string name="protected_reason_calls">Llamadas y mensajes</string>
     <string name="protected_reason_self">Esta aplicación</string>
+    <string name="restricted_inactive">Restringida: aún no está activo</string>
+    <string name="saving_off_with_rules">Reglas definidas, pero inactivas: actívalo para aplicarlas</string>
+    <string name="open_blocking">Bloqueo por red →</string>
+    <string name="blocking_title">Bloqueo</string>
+    <string name="blocking_hint">Elige qué redes puede usar cada aplicación. Con una tarifa limitada, la respuesta habitual es «nada de datos móviles, el Wi‑Fi está bien».</string>
+    <string name="blocking_none">Nada bloqueado</string>
+    <string name="blocking_active">Activo · %1$d bloqueadas en Wi‑Fi, %2$d en datos móviles</string>
+    <string name="blocking_inactive">Reglas definidas, pero inactivas: se requiere permiso</string>
+    <string name="blocked_everywhere">Bloqueada en Wi‑Fi y datos móviles</string>
+    <string name="blocked_mobile_only">Bloqueada solo en datos móviles</string>
+    <string name="blocked_wifi_only">Bloqueada solo en Wi‑Fi</string>
+    <string name="allowed">Permitida</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Móviles</string>
+    <string name="consent_required">Se requiere permiso para bloquear aplicaciones</string>
+    <string name="loading_apps">Cargando aplicaciones…</string>
+    <string name="mode_label">Cuando una aplicación bloqueada intenta conectarse</string>
+    <string name="mode_drop">Ignorarla (lo más silencioso)</string>
+    <string name="mode_refuse">Rechazarla de inmediato</string>
+    <string name="mode_nxdomain">Responder «dirección inexistente» (recomendado)</string>
+    <string name="mode_help_drop">Los paquetes se descartan y la aplicación espera hasta agotar su propio tiempo de espera. Es lo que hace la mayoría de las aplicaciones de bloqueo.</string>
+    <string name="mode_help_refuse">Las conexiones se rechazan al instante. Medido con tráfico real, esto hizo que las aplicaciones reintentaran antes y un 40%% más a menudo, por eso no es la opción predeterminada.</string>
+    <string name="mode_help_nxdomain">Las búsquedas de nombres reciben una respuesta negativa real en lugar de silencio. Registró el menor tráfico de reintentos de las tres.</string>
 </resources>

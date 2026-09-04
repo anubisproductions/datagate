@@ -33,4 +33,27 @@
     <string name="protected_reason_push">Achemine toutes vos notifications</string>
     <string name="protected_reason_calls">Appels et messages</string>
     <string name="protected_reason_self">Cette application</string>
+    <string name="restricted_inactive">Restreinte — pas encore active</string>
+    <string name="saving_off_with_rules">Règles définies, mais inactives — activez pour les appliquer</string>
+    <string name="open_blocking">Blocage par réseau →</string>
+    <string name="blocking_title">Blocage</string>
+    <string name="blocking_hint">Choisissez les réseaux que chaque application peut utiliser. Avec un forfait limité, la réponse habituelle est « pas de données mobiles, le Wi‑Fi convient ».</string>
+    <string name="blocking_none">Rien de bloqué</string>
+    <string name="blocking_active">Actif · %1$d bloquée(s) en Wi‑Fi, %2$d en données mobiles</string>
+    <string name="blocking_inactive">Règles définies, mais inactives — une autorisation est requise</string>
+    <string name="blocked_everywhere">Bloquée en Wi‑Fi et en données mobiles</string>
+    <string name="blocked_mobile_only">Bloquée uniquement en données mobiles</string>
+    <string name="blocked_wifi_only">Bloquée uniquement en Wi‑Fi</string>
+    <string name="allowed">Autorisée</string>
+    <string name="col_wifi">Wi‑Fi</string>
+    <string name="col_mobile">Mobile</string>
+    <string name="consent_required">Une autorisation est requise pour bloquer des applications</string>
+    <string name="loading_apps">Chargement des applications…</string>
+    <string name="mode_label">Quand une application bloquée tente de se connecter</string>
+    <string name="mode_drop">L\'ignorer (le plus discret)</string>
+    <string name="mode_refuse">La refuser immédiatement</string>
+    <string name="mode_nxdomain">Répondre « adresse introuvable » (recommandé)</string>
+    <string name="mode_help_drop">Les paquets sont abandonnés et l\'application attend l\'expiration de son propre délai. C\'est ce que font la plupart des applications de blocage.</string>
+    <string name="mode_help_refuse">Les connexions sont refusées immédiatement. Mesuré sur du trafic réel, cela a poussé les applications à réessayer plus tôt et environ 40%% plus souvent : ce n\'est donc pas l\'option par défaut.</string>
+    <string name="mode_help_nxdomain">Les résolutions de noms obtiennent une vraie réponse négative au lieu du silence. C\'est l\'option qui a mesuré le moins de trafic de réessai des trois.</string>
 </resources>
