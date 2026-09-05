@@ -3,7 +3,7 @@
     <!-- API 31+ uses the real SplashScreen API, so the window background is not needed. -->
     <style name="Theme.DataGate.Splash" parent="Theme.DataGate">
         <item name="android:windowSplashScreenBackground">@color/anubis_sandstone</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_splash_mark</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@color/anubis_sandstone</item>
     </style>
 </resources>
