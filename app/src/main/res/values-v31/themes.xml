@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- API 31+ uses the real SplashScreen API, so the window background is not needed. -->
+    <!--
+      API 31+ uses the real SplashScreen API, which gives two slots and this uses both: the
+      icon, masked to a circle, and a branding image pinned to the bottom. That is the
+      platform's own way to show a studio wordmark, and it costs the user nothing because the
+      splash is drawn during the cold start that happens regardless. A branded activity after
+      the system splash would have added real waiting time to an app people open to check one
+      number.
+
+      The icon background is the artwork's navy, which turns the circular mask from an
+      accidental crop into a deliberate medallion.
+    -->
     <style name="Theme.DataGate.Splash" parent="Theme.DataGate">
-        <item name="android:windowSplashScreenBackground">@color/anubis_sandstone</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_background</item>
         <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_splash_mark</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/anubis_sandstone</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/anubis_navy</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/splash_branding</item>
     </style>
 </resources>

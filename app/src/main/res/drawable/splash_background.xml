@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Pre-API-31 splash. Android's SplashScreen API only exists from 31, so below that the
-     window background stands in. Static by design: the platform splash cannot play video,
-     and a timed intro is friction on an app people open to check one number. -->
+     window background stands in and has to compose the whole thing by hand: ground, mascot,
+     wordmark. Static by design - the platform splash cannot play video, and a timed intro is
+     friction on an app people open to check one number.
+
+     The mark here is the studio's, not the app's: the launcher icon says which app this is,
+     the splash says who made it. They are separate resources so one can change without
+     dragging the other with it. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/anubis_sandstone" />
-    <item android:gravity="center">
+    <item android:drawable="@color/splash_background" />
+    <item>
         <bitmap
             android:gravity="center"
             android:src="@mipmap/ic_splash_mark" />
+    </item>
+    <item android:bottom="72dp">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/splash_branding" />
     </item>
 </layer-list>
