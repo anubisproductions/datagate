@@ -10,12 +10,14 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.SystemClock
 import android.provider.Settings
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
@@ -130,6 +132,7 @@ class MainActivity : Activity() {
         // the splash background stays behind the content.
         setTheme(R.style.Theme_DataGate)
         super.onCreate(savedInstanceState)
+        holdSplashForReview()
         setContentView(R.layout.activity_main)
 
         onboarding = findViewById(R.id.onboarding)
@@ -158,6 +161,31 @@ class MainActivity : Activity() {
         setUpFilter()
         setUpList()
         setUpMaster()
+    }
+
+    /**
+     * Keeps the splash on screen in the .splashtest variant so it can actually be looked at.
+     *
+     * It lasts roughly 150 ms in normal use - shorter than a screenshot round trip - which
+     * made it impossible to review or capture. BuildConfig.SPLASH_HOLD_MS is 0 in release,
+     * so this returns immediately there and the constant folds away.
+     *
+     * Holds by refusing the first draw rather than sleeping: blocking the main thread would
+     * trip the ANR watchdog long before sixty seconds were up.
+     */
+    private fun holdSplashForReview() {
+        val until = SystemClock.uptimeMillis() + BuildConfig.SPLASH_HOLD_MS
+        if (BuildConfig.SPLASH_HOLD_MS <= 0L) return
+        val content = findViewById<View>(android.R.id.content)
+        content.viewTreeObserver.addOnPreDrawListener(
+            object : ViewTreeObserver.OnPreDrawListener {
+                override fun onPreDraw(): Boolean {
+                    if (SystemClock.uptimeMillis() < until) return false
+                    content.viewTreeObserver.removeOnPreDrawListener(this)
+                    return true
+                }
+            }
+        )
     }
 
     override fun onResume() {

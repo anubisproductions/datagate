@@ -35,6 +35,10 @@ android {
         }
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -43,6 +47,22 @@ android {
             if (keystoreProps.getProperty("storeFile") != null) {
                 signingConfig = signingConfigs.getByName("release")
             }
+            buildConfigField("long", "SPLASH_HOLD_MS", "0L")
+        }
+        debug {
+            /*
+             * The splash lasts about 150 ms on a mid-range phone, and a screenshot round
+             * trip takes longer than that, so it could never be captured or reviewed. This
+             * variant pins it open instead.
+             *
+             * A separate applicationId matters as much as the hold: it installs alongside
+             * the real app rather than replacing it, so checking the splash no longer costs
+             * the user their rules, baselines and Usage-access grant. Reinstalling over the
+             * release build wiped all three more than once before this existed.
+             */
+            applicationIdSuffix = ".splashtest"
+            versionNameSuffix = "-splashtest"
+            buildConfigField("long", "SPLASH_HOLD_MS", "60000L")
         }
     }
 
