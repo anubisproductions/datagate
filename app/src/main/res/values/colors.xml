@@ -15,6 +15,10 @@
     <color name="anubis_lapis">#1E4E8C</color>
     <color name="anubis_carnelian">#B43A2E</color>
     <color name="anubis_malachite">#1F7A4D</color>
+    <!-- The generated icon tile's own surface, sampled from it. The adaptive
+         background layer uses it so the cut-out dial sits on the colour it was
+         drawn against and the crop leaves no visible square. -->
+    <color name="anubis_icon_plate">#CCB69A</color>
     <!-- The mascot artwork's own ground. Used only behind the splash medallion,
          so the cut-out sits on the colour it was drawn against. -->
     <!-- Sampled from the generated logo file. The splash uses it so the artwork's
