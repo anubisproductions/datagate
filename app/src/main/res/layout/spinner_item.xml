@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Spinner rows that wrap instead of truncating.
+
+  The platform's simple_spinner_dropdown_item is a single ellipsized line, which cut the
+  block-mode choice down to: Answer "no such address" (recommend..  The alternative was
+  shortening that label in twelve locales and losing the part that explains the choice;
+  letting it run to two lines keeps the wording and costs nothing.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:gravity="center_vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:maxLines="2"
+    android:ellipsize="none"
+    android:textAppearance="?android:attr/textAppearanceMedium" />

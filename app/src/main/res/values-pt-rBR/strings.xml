@@ -73,4 +73,9 @@
         <item quantity="other">%1$d apps bloqueados nos dados móveis</item>
     </plurals>
     <string name="protected_reason_system">Faz parte do próprio Android</string>
+    <string name="usage_handoff_title">Você vai sair deste app</string>
+    <string name="usage_handoff_body">O Android guarda os números de dados por app atrás de uma configuração do sistema, então a próxima tela é Configurações, e não este app.
+
+Procure “%1$s” na lista e ative, depois toque em Voltar para retornar aqui. Nada mais precisa ser mudado nessa tela.</string>
+    <string name="usage_handoff_go">Abrir Configurações</string>
 </resources>

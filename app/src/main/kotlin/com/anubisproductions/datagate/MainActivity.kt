@@ -215,7 +215,25 @@ class MainActivity : Activity() {
 
     // ------------------------------------------------------------------ onboarding
 
+    /**
+     * Explains the hand-off before making it.
+     *
+     * Tapping the button used to drop the user straight into a system Settings list with no
+     * warning, on a screen that looks nothing like this app. The predictable reaction is
+     * that the app is broken or has thrown you out, and it is the first thing a
+     * non-technical tester hits. One dialog naming the screen they are about to see, the
+     * row to look for and the way back costs a tap and removes the confusion.
+     */
     private fun openUsageAccess() {
+        AlertDialog.Builder(this)
+            .setTitle(R.string.usage_handoff_title)
+            .setMessage(getString(R.string.usage_handoff_body, getString(R.string.app_name)))
+            .setPositiveButton(R.string.usage_handoff_go) { _, _ -> jumpToUsageAccess() }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun jumpToUsageAccess() {
         val ok = listOf(
             Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS),
             Intent(Settings.ACTION_SETTINGS),
@@ -301,13 +319,13 @@ class MainActivity : Activity() {
     private fun setUpFilter() {
         filter.adapter = ArrayAdapter(
             this,
-            android.R.layout.simple_spinner_dropdown_item,
+            R.layout.spinner_item,
             listOf(
                 getString(R.string.filter_all),
                 getString(R.string.filter_mobile),
                 getString(R.string.filter_background),
             ),
-        )
+        ).apply { setDropDownViewResource(R.layout.spinner_dropdown_item) }
         filter.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
                 filterMode = pos
@@ -346,7 +364,8 @@ class MainActivity : Activity() {
             val days = if (r != null) {
                 ((r.cycleEnd - r.cycleStart).toDouble() / 86_400_000.0).coerceAtLeast(1.0)
             } else 1.0
-            Budget.recordBlock(this, a.packageName, (a.total / days).toLong())
+            Budget.recordBlock(this, a.packageName, (a.total / days).toLong(),
+                BlockVpnService.isRunning)
         }
         commit()
     }
@@ -388,7 +407,8 @@ class MainActivity : Activity() {
                 val days = ((r.cycleEnd - r.cycleStart).toDouble() / 86_400_000.0).coerceAtLeast(1.0)
                 candidates.forEach {
                     blocked.add(it.packageName)
-                    Budget.recordBlock(this, it.packageName, (it.total / days).toLong())
+                    Budget.recordBlock(this, it.packageName, (it.total / days).toLong(),
+                        BlockVpnService.isRunning)
                 }
                 commit()
             }

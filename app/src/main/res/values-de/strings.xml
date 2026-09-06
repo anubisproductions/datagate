@@ -69,4 +69,9 @@
         <item quantity="other">%1$d Apps bei mobilen Daten blockiert</item>
     </plurals>
     <string name="protected_reason_system">Teil von Android selbst</string>
+    <string name="usage_handoff_title">Sie verlassen jetzt diese App</string>
+    <string name="usage_handoff_body">Android bewahrt die Datenwerte pro App hinter einer Systemeinstellung auf, deshalb ist der nächste Bildschirm die Einstellungen und nicht diese App.
+
+Suchen Sie „%1$s“ in der Liste und schalten Sie es ein, dann kehren Sie mit Zurück hierher zurück. Sonst muss dort nichts geändert werden.</string>
+    <string name="usage_handoff_go">Einstellungen öffnen</string>
 </resources>

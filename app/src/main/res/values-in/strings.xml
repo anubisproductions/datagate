@@ -71,4 +71,9 @@
         <item quantity="other">%1$d aplikasi dibatasi di data seluler</item>
     </plurals>
     <string name="protected_reason_system">Bagian dari Android itu sendiri</string>
+    <string name="usage_handoff_title">Anda akan meninggalkan aplikasi ini</string>
+    <string name="usage_handoff_body">Android menyimpan angka pemakaian per aplikasi di balik setelan sistem, jadi layar berikutnya adalah Setelan, bukan aplikasi ini.
+
+Cari “%1$s” di daftar lalu nyalakan, kemudian tekan Kembali untuk kembali ke sini. Tidak ada lagi yang perlu diubah di sana.</string>
+    <string name="usage_handoff_go">Buka Setelan</string>
 </resources>

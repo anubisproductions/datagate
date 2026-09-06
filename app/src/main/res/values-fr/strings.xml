@@ -73,4 +73,9 @@
         <item quantity="other">%1$d applications restreintes en données mobiles</item>
     </plurals>
     <string name="protected_reason_system">Fait partie d\'Android lui-même</string>
+    <string name="usage_handoff_title">Vous allez quitter cette application</string>
+    <string name="usage_handoff_body">Android conserve les chiffres de données par application derrière un réglage système : l’écran suivant est donc les Paramètres, pas cette application.
+
+Cherchez « %1$s » dans la liste et activez-le, puis appuyez sur Retour pour revenir ici. Rien d’autre n’est à modifier sur cet écran.</string>
+    <string name="usage_handoff_go">Ouvrir les Paramètres</string>
 </resources>

@@ -77,4 +77,9 @@
         <item quantity="other">Заблокировано %1$d приложения в мобильной сети</item>
     </plurals>
     <string name="protected_reason_system">Часть самой системы Android</string>
+    <string name="usage_handoff_title">Сейчас вы покинете это приложение</string>
+    <string name="usage_handoff_body">Android хранит данные по каждому приложению за системной настройкой, поэтому следующий экран — это Настройки, а не это приложение.
+
+Найдите «%1$s» в списке и включите, затем нажмите Назад. Больше там ничего менять не нужно.</string>
+    <string name="usage_handoff_go">Открыть настройки</string>
 </resources>

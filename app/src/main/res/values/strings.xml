@@ -81,4 +81,9 @@
         <item quantity="other">%1$d apps restricted on mobile data</item>
     </plurals>
     <string name="protected_reason_system">Part of Android itself</string>
+    <string name="usage_handoff_title">You are about to leave this app</string>
+    <string name="usage_handoff_body">Android keeps the per-app data figures behind a system setting, so the next screen is Settings, not this app.
+
+Look for “%1$s” in the list and switch it on, then press Back to return here. Nothing else on that screen needs changing.</string>
+    <string name="usage_handoff_go">Open Settings</string>
 </resources>

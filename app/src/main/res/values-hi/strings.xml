@@ -73,4 +73,9 @@
         <item quantity="other">मोबाइल डेटा पर %1$d ऐप प्रतिबंधित</item>
     </plurals>
     <string name="protected_reason_system">एंड्रॉइड सिस्टम का हिस्सा</string>
+    <string name="usage_handoff_title">आप यह ऐप छोड़ने जा रहे हैं</string>
+    <string name="usage_handoff_body">एंड्रॉयड हर ऐप के डेटा आंकड़े एक सिस्टम सेटिंग के पीछे रखता है। इसलिए अगली स्क्रीन सेटिंग हैं, यह ऐप नहीं।
+
+सूची में “%1$s” ढूंढें और उसे चालू करें, फिर बैक दबाकर यहाँ लौटें। उस स्क्रीन पर और कुछ बदलने की ज़रूरत नहीं।</string>
+    <string name="usage_handoff_go">सेटिंग खोलें</string>
 </resources>

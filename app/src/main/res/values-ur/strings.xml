@@ -69,4 +69,9 @@
         <item quantity="other">موبائل ڈیٹا پر %1$d ایپس محدود</item>
     </plurals>
     <string name="protected_reason_system">اینڈرائیڈ سسٹم کا حصہ</string>
+    <string name="usage_handoff_title">آپ یہ ایپ چھوڑنے والے ہیں</string>
+    <string name="usage_handoff_body">اینڈرائیڈ ہر ایپ کے ڈیٹا اعداد ایک سسٹم سیٹنگ کے پیچھے رکھتا ہے، اس لیے اگلی اسکرین سیٹنگز ہے، یہ ایپ نہیں۔
+
+فہرست میں “%1$s” تلاش کرکے آن کریں، پھر واپس دبا کر یہاں لوٹ آئیں۔ اس اسکرین پر اور کچھ بدلنے کی ضرورت نہیں۔</string>
+    <string name="usage_handoff_go">سیٹنگز کھولیں</string>
 </resources>

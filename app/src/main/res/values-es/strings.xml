@@ -73,4 +73,9 @@
         <item quantity="other">%1$d aplicaciones restringidas en datos móviles</item>
     </plurals>
     <string name="protected_reason_system">Forma parte del propio Android</string>
+    <string name="usage_handoff_title">Vas a salir de esta aplicación</string>
+    <string name="usage_handoff_body">Android guarda las cifras de datos por aplicación detrás de un ajuste del sistema, así que la siguiente pantalla es Ajustes, no esta aplicación.
+
+Busca «%1$s» en la lista y actívalo, luego pulsa Atrás para volver aquí. No hace falta cambiar nada más en esa pantalla.</string>
+    <string name="usage_handoff_go">Abrir Ajustes</string>
 </resources>

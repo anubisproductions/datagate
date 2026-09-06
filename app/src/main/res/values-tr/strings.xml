@@ -71,4 +71,9 @@
         <item quantity="other">Mobil veride %1$d uygulama kısıtlandı</item>
     </plurals>
     <string name="protected_reason_system">Android\'in kendi parçası</string>
+    <string name="usage_handoff_title">Bu uygulamadan çıkmak üzeresiniz</string>
+    <string name="usage_handoff_body">Android uygulama başına veri rakamlarını bir sistem ayarının arkasında tutar, bu yüzden sonraki ekran bu uygulama değil Ayarlar’dır.
+
+Listede “%1$s” öğesini bulup açın, sonra Geri’ye basarak buraya dönün. O ekranda başka bir şey değiştirmeniz gerekmez.</string>
+    <string name="usage_handoff_go">Ayarları aç</string>
 </resources>

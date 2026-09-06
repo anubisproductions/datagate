@@ -99,7 +99,7 @@ on the row. Two related defects surfaced while verifying it:
 "Worst background" renders as "Worst backgr..", and the block-mode selection truncates
 similarly. Cosmetic; shorten the strings or widen the controls.
 
-### 9. Play Billing pulls in `INTERNET` — MEASURED, and it is a product decision
+### 9. Play Billing pulls in `INTERNET` — MEASURED, and DECIDED: the app stays free
 
 Tested 2026-09-07 by adding `com.android.billingclient:billing-ktx:7.1.1`, building release,
 and running `aapt2 dump permissions` on the APK. The result is unambiguous:
@@ -126,8 +126,13 @@ Three ways out, none free:
    second listing and a clunkier purchase flow.
 3. **Stay free.** Keeps the claim intact and earns nothing.
 
-Option 2 is the only one that keeps both. Decide before building any Pro feature, because the
-answer changes where the unlock check lives.
+**Decided 2026-09-07: option 3. The app ships free in full.** No paid tier, no unlock app, no
+ads. The trust claim is worth more to the studio than roughly US$3,800 spread over years, and
+a second listing to work around our own architecture is complexity bought with no upside.
+
+This closes the question. If it is ever reopened, option 2 is the only route that keeps both,
+and the decision has to be made before any Pro feature is written, because it decides where
+the unlock check lives.
 
 ### 11. Notification permission was never requested — FIXED
 

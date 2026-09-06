@@ -170,7 +170,8 @@ class BlockingActivity : Activity() {
         )
         val order = listOf(BlockMode.DROP, BlockMode.REFUSE, BlockMode.NXDOMAIN)
         modeSpinner.adapter =
-            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, labels)
+            ArrayAdapter(this, R.layout.spinner_item, labels)
+                .apply { setDropDownViewResource(R.layout.spinner_dropdown_item) }
         modeSpinner.setSelection(order.indexOf(Rules.mode(this)).coerceAtLeast(0))
         showModeHelp(Rules.mode(this))
 

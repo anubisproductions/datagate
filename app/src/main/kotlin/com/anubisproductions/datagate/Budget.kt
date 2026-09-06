@@ -17,6 +17,8 @@ object Budget {
     private const val KEY_RESET_DAY = "reset_day"
     private const val PREFIX_BLOCKED_AT = "blocked_at_"
     private const val PREFIX_DAILY_AVG = "daily_avg_"
+    private const val PREFIX_ENFORCED_MS = "enforced_ms_"
+    private const val PREFIX_SEGMENT_START = "segment_start_"
 
     private fun prefs(ctx: Context) = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
@@ -35,17 +37,66 @@ object Budget {
      * Records the baseline at the moment an app is restricted: when, and what it had been
      * spending per day. Without this there is nothing to compare against later.
      */
-    fun recordBlock(ctx: Context, pkg: String, bytesPerDayBefore: Long) {
+    fun recordBlock(ctx: Context, pkg: String, bytesPerDayBefore: Long, engineUp: Boolean) {
+        val now = System.currentTimeMillis()
         prefs(ctx).edit()
-            .putLong(PREFIX_BLOCKED_AT + pkg, System.currentTimeMillis())
+            .putLong(PREFIX_BLOCKED_AT + pkg, now)
             .putLong(PREFIX_DAILY_AVG + pkg, bytesPerDayBefore)
+            .putLong(PREFIX_ENFORCED_MS + pkg, 0L)
+            .putLong(PREFIX_SEGMENT_START + pkg, if (engineUp) now else 0L)
             .apply()
+    }
+
+    /**
+     * Opens an enforcement window for each package the tunnel is now actually carrying.
+     *
+     * Savings are credited per millisecond of enforcement, not per millisecond of wall
+     * clock. A rule can sit in SharedPreferences for days with the engine down - consent
+     * refused, another VPN holding the slot, the user simply turning it off - and crediting
+     * that time invented savings the app never made.
+     */
+    fun engineStarted(ctx: Context, pkgs: Collection<String>) {
+        val now = System.currentTimeMillis()
+        val p = prefs(ctx)
+        val e = p.edit()
+        for (pkg in pkgs) {
+            if (p.getLong(PREFIX_SEGMENT_START + pkg, 0L) == 0L) {
+                e.putLong(PREFIX_SEGMENT_START + pkg, now)
+            }
+        }
+        e.apply()
+    }
+
+    /** Closes the open enforcement window and banks it. */
+    fun engineStopped(ctx: Context, pkgs: Collection<String>) {
+        val now = System.currentTimeMillis()
+        val p = prefs(ctx)
+        val e = p.edit()
+        for (pkg in pkgs) {
+            val start = p.getLong(PREFIX_SEGMENT_START + pkg, 0L)
+            if (start != 0L) {
+                e.putLong(PREFIX_ENFORCED_MS + pkg,
+                    p.getLong(PREFIX_ENFORCED_MS + pkg, 0L) + (now - start))
+                e.putLong(PREFIX_SEGMENT_START + pkg, 0L)
+            }
+        }
+        e.apply()
+    }
+
+    /** Banked enforcement time plus whatever the currently open window has accrued. */
+    fun enforcedMs(ctx: Context, pkg: String): Long {
+        val p = prefs(ctx)
+        val banked = p.getLong(PREFIX_ENFORCED_MS + pkg, 0L)
+        val start = p.getLong(PREFIX_SEGMENT_START + pkg, 0L)
+        return if (start == 0L) banked else banked + (System.currentTimeMillis() - start)
     }
 
     fun clearBlock(ctx: Context, pkg: String) {
         prefs(ctx).edit()
             .remove(PREFIX_BLOCKED_AT + pkg)
             .remove(PREFIX_DAILY_AVG + pkg)
+            .remove(PREFIX_ENFORCED_MS + pkg)
+            .remove(PREFIX_SEGMENT_START + pkg)
             .apply()
     }
 
@@ -60,13 +111,16 @@ object Budget {
      * Deliberately an estimate and labelled as one in the UI: it assumes the app would have
      * carried on at its prior daily rate. [actualSince] is subtracted so an app that still
      * leaks some traffic is not credited with saving it.
+     *
+     * The elapsed term is enforcement time, not wall clock. Using wall clock meant a rule
+     * left in place with the engine switched off kept earning savings the app never made,
+     * which is the one number here a user could catch us being wrong about.
      */
     fun estimatedSaved(ctx: Context, pkg: String, actualSince: Long): Long {
-        val since = blockedAt(ctx, pkg)
-        if (since == 0L) return 0L
+        if (blockedAt(ctx, pkg) == 0L) return 0L
         val avg = dailyAvgBefore(ctx, pkg)
         if (avg == 0L) return 0L
-        val days = (System.currentTimeMillis() - since).toDouble() / 86_400_000.0
+        val days = enforcedMs(ctx, pkg).toDouble() / 86_400_000.0
         if (days <= 0) return 0L
         return ((avg * days).toLong() - actualSince).coerceAtLeast(0L)
     }

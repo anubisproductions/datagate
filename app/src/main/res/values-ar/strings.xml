@@ -83,4 +83,9 @@
         <item quantity="other">%1$d تطبيق مقيّد على بيانات الجوّال</item>
     </plurals>
     <string name="protected_reason_system">جزء من نظام أندرويد نفسه</string>
+    <string name="usage_handoff_title">ستغادر هذا التطبيق الآن</string>
+    <string name="usage_handoff_body">يحفظ أندرويد أرقام استهلاك كل تطبيق خلف إعداد في النظام، لذا فالشاشة التالية هي الإعدادات وليست هذا التطبيق.
+
+ابحث عن “%1$s” في القائمة وشغّله، ثم اضغط رجوع للعودة إلى هنا. لا حاجة لتغيير أي شيء آخر في تلك الشاشة.</string>
+    <string name="usage_handoff_go">فتح الإعدادات</string>
 </resources>

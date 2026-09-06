@@ -83,6 +83,9 @@ class BlockVpnService : VpnService() {
 
     private var tun: ParcelFileDescriptor? = null
     private var worker: Thread? = null
+
+    /** Packages the tunnel is currently carrying, for the enforcement-time ledger. */
+    private var enforcing: List<String> = emptyList()
     @Volatile private var running = false
 
     /** uid -> label, resolved lazily so the read loop never touches PackageManager. */
@@ -257,6 +260,11 @@ class BlockVpnService : VpnService() {
         tun = fd
         running = true
         isRunning = true
+        // Savings are credited per millisecond of enforcement, so the window opens here -
+        // when the tunnel is actually carrying these packages - and not when the rule was
+        // written. See Budget.estimatedSaved.
+        Budget.engineStarted(this, applied)
+        enforcing = ArrayList(applied)
         startForegroundCompat(
             resources.getQuantityString(
                 if (kind == NetKind.WIFI) R.plurals.notif_active_wifi
@@ -280,6 +288,12 @@ class BlockVpnService : VpnService() {
     private fun teardown() {
         running = false
         isRunning = false
+        // Bank the enforcement window before anything else. teardown() runs on revoke, on
+        // stop, and on every network change that rebuilds the tunnel, so missing it here
+        // would leave a window open forever and savings would keep accruing off a stale
+        // start time - the bug this whole ledger exists to prevent.
+        Budget.engineStopped(this, enforcing)
+        enforcing = emptyList()
         worker?.interrupt()
         worker = null
         try {
