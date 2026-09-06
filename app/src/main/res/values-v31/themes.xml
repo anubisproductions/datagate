@@ -2,19 +2,18 @@
 <resources>
     <!--
       API 31+ uses the real SplashScreen API, which gives two slots and this uses both: the
-      icon, masked to a circle, and a branding image pinned to the bottom. That is the
-      platform's own way to show a studio wordmark, and it costs the user nothing because the
-      splash is drawn during the cold start that happens regardless. A branded activity after
-      the system splash would have added real waiting time to an app people open to check one
-      number.
+      icon, masked to a circle and centred, and a branding image pinned to the bottom edge.
+      Only the icon slot is used. Filling both with different parts of the logo split the
+      lockup into a floating head and a stranded banner with a gap between them - two
+      unrelated pieces, which is what it was. The whole shield goes in the icon slot instead,
+      scaled so the mask cannot clip it.
 
-      The icon background is the artwork's navy, which turns the circular mask from an
+      The icon background is the artwork's own navy, which turns the circular mask from an
       accidental crop into a deliberate medallion.
     -->
     <style name="Theme.DataGate.Splash" parent="Theme.DataGate">
         <item name="android:windowSplashScreenBackground">@color/splash_background</item>
         <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_splash_mark</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@color/anubis_navy</item>
-        <item name="android:windowSplashScreenBrandingImage">@drawable/splash_branding</item>
     </style>
 </resources>

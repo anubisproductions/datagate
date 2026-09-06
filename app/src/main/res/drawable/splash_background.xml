@@ -14,9 +14,4 @@
             android:gravity="center"
             android:src="@mipmap/ic_splash_mark" />
     </item>
-    <item android:bottom="72dp">
-        <bitmap
-            android:gravity="bottom|center_horizontal"
-            android:src="@drawable/splash_branding" />
-    </item>
 </layer-list>
