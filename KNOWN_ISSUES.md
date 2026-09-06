@@ -99,12 +99,35 @@ on the row. Two related defects surfaced while verifying it:
 "Worst background" renders as "Worst backgr..", and the block-mode selection truncates
 similarly. Cosmetic; shorten the strings or widen the controls.
 
-### 9. Play Billing may pull in `INTERNET`
+### 9. Play Billing pulls in `INTERNET` — MEASURED, and it is a product decision
 
-Not yet verified. Before committing to the paid tier, integrate Play Billing and run
-`aapt dump permissions` on the resulting APK. If the library adds `INTERNET`, the trust
-claim and the "no data collected" data-safety declaration both change, and that is a
-product decision rather than a detail.
+Tested 2026-09-07 by adding `com.android.billingclient:billing-ktx:7.1.1`, building release,
+and running `aapt2 dump permissions` on the APK. The result is unambiguous:
+
+```
++ com.android.vending.BILLING
++ android.permission.INTERNET      <-- merged in from the billing library
+```
+
+The dependency was reverted immediately; the shipping APK still has no `INTERNET`.
+
+So the paid tier and the trust claim are mutually exclusive as things stand. "This app has no
+internet permission" appears in the store listing, the privacy policy, the README and the
+onboarding screen, and it is the one thing competitors cannot copy without re-architecting.
+Play Billing costs it, for a tier `GO_TO_MARKET.md` values at roughly US$3,800 lifetime.
+
+Three ways out, none free:
+
+1. **Ship Billing and drop the claim.** Simplest, and throws away the differentiator.
+2. **Separate paid unlock app.** A tiny "Data Saver Pro Key" listing; the free app detects it
+   with `PackageManager` - which it can already do, it holds `QUERY_ALL_PACKAGES` - and
+   verifies its signing certificate so a fake key cannot unlock it. No network on either side
+   of that check, and Play still takes the payment because the key is a paid app. Costs a
+   second listing and a clunkier purchase flow.
+3. **Stay free.** Keeps the claim intact and earns nothing.
+
+Option 2 is the only one that keeps both. Decide before building any Pro feature, because the
+answer changes where the unlock check lives.
 
 ### 11. Notification permission was never requested — FIXED
 
