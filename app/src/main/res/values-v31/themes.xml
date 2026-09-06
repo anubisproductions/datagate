@@ -8,12 +8,13 @@
       unrelated pieces, which is what it was. The whole shield goes in the icon slot instead,
       scaled so the mask cannot clip it.
 
-      The icon background is the artwork's own navy, which turns the circular mask from an
-      accidental crop into a deliberate medallion.
+      No icon background colour is set. A coloured disc behind the mark framed it like a
+      badge inside a badge, which is what read as the logo being clipped. Instead the mark
+      carries the logo's own backdrop and the splash background is that same colour, so the
+      mask cuts backdrop against backdrop and cannot be seen.
     -->
     <style name="Theme.DataGate.Splash" parent="Theme.DataGate">
         <item name="android:windowSplashScreenBackground">@color/splash_background</item>
         <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_splash_mark</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/anubis_navy</item>
     </style>
 </resources>

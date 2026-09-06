@@ -17,7 +17,10 @@
     <color name="anubis_malachite">#1F7A4D</color>
     <!-- The mascot artwork's own ground. Used only behind the splash medallion,
          so the cut-out sits on the colour it was drawn against. -->
-    <color name="anubis_navy">#0A1A26</color>
+    <!-- Sampled from the generated logo file. The splash uses it so the artwork's
+         backdrop and the screen behind it are the same colour, which is what makes
+         the icon slot's circular mask invisible. -->
+    <color name="anubis_logo_backdrop">#FEFEFE</color>
 
     <!-- Semantic, for the data UI. Deliberately neutral apart from the gold accent. -->
     <!--
@@ -28,8 +31,7 @@
     -->
     <color name="accent_restricted">@color/anubis_malachite</color>
     <color name="bar_background_share">@color/anubis_carnelian</color>
-    <!-- The splash is the studio's moment, not the app's: dark ground so the
-         full-colour mascot and the gold wordmark carry it. The app itself stays
-         on sandstone. -->
-    <color name="splash_background">@color/anubis_tomb</color>
+    <!-- Matches the logo's own backdrop rather than a studio colour. Anything else
+         frames the mark in a coloured disc and reads as the logo being clipped. -->
+    <color name="splash_background">@color/anubis_logo_backdrop</color>
 </resources>
