@@ -62,7 +62,7 @@ android {
              */
             applicationIdSuffix = ".splashtest"
             versionNameSuffix = "-splashtest"
-            buildConfigField("long", "SPLASH_HOLD_MS", "10000L")
+            buildConfigField("long", "SPLASH_HOLD_MS", "20000L")
         }
     }
 
